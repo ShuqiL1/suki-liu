@@ -17,6 +17,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-link:hover{color:#3d35c8}
 
 /* HERO */
+.home-story{position:relative}
+.home-story>section{position:relative;z-index:1}
 #hero{min-height:100vh;display:grid;grid-template-columns:0.92fr 1.08fr;align-items:center;padding:0 2.5rem;padding-top:64px;gap:0}
 .hero-left{position:relative;z-index:1;transform:translateX(10vw)}
 .hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;color:#3d35c8;letter-spacing:0.18em;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.6rem}
@@ -33,21 +35,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .cta:hover .arr{transform:translateY(4px)}
 
 /* HERO VISUAL */
-.hero-right{display:flex;align-items:center;justify-content:center;height:calc(100vh - 64px);overflow:hidden;transform:translateX(-3vw)}
-.orb-wrap{width:min(62vw,760px);height:min(74vh,680px);min-width:480px;min-height:460px;display:flex;align-items:center;justify-content:center;transform-style:preserve-3d}
+.story-orb-sticky{position:sticky;top:64px;z-index:0;height:calc(100vh - 64px);margin-bottom:calc(-100vh + 64px);pointer-events:none}
+.story-orb-stage{height:100%;display:grid;grid-template-columns:0.92fr 1.08fr;align-items:center;padding:0 2.5rem}
+.story-orb-slot{grid-column:2;display:flex;align-items:center;justify-content:center;height:100%;overflow:visible;transform:translateX(3vw)}
+.hero-right{height:calc(100vh - 64px)}
+.orb-wrap{width:min(82vw,980px);height:min(74vh,680px);min-width:480px;min-height:460px;display:flex;align-items:center;justify-content:center;transform-style:preserve-3d}
 #heroOrb{width:100%;height:100%;display:block;filter:drop-shadow(0 24px 48px rgba(61,53,200,0.12))}
 
 /* PROJECTS SECTION */
-#projects{padding:5rem 2.5rem 6rem;border-top:1px solid #e2e0da}
-.sec-header{display:flex;align-items:baseline;gap:1rem;margin-bottom:3rem}
+#projects{position:relative;padding:5rem 2.5rem 6rem;border-top:1px solid #e2e0da;overflow:hidden}
+.sec-header{position:relative;z-index:2;display:flex;align-items:baseline;gap:1rem;margin-bottom:3rem}
 .sec-num{font-family:'DM Mono',monospace;font-size:11px;color:#3d35c8;letter-spacing:0.15em}
 .sec-title{font-size:2rem;font-weight:300;letter-spacing:-0.02em}
 
-.proj-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.proj-list{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
 .project-card{position:relative;min-width:0;overflow:hidden;border:1px solid #e2e0da;background:#fafaf8;cursor:pointer;transition:transform 0.22s,border-color 0.22s,box-shadow 0.22s,background 0.22s}
 .project-card:hover{transform:translateY(-6px);border-color:#3d35c8;box-shadow:0 20px 46px rgba(61,53,200,0.11);background:#fff}
 .project-card.soon{cursor:default;opacity:0.58}
 .project-card.soon:hover{transform:none;border-color:#e2e0da;box-shadow:none;background:#fafaf8}
+.project-coming-soon{align-self:center;justify-self:center;width:min(42%,168px);aspect-ratio:1;border-radius:50%;border:1px solid #d9d7d2;background:#eeeeeb;color:#8a8784;display:flex;align-items:center;justify-content:center;text-align:center;padding:1.15rem;font-family:'DM Mono',monospace;font-size:10px;line-height:1.55;letter-spacing:0.08em;cursor:default;transition:transform 0.22s,border-color 0.22s,box-shadow 0.22s,background 0.22s,color 0.22s}
+.project-coming-soon:hover{transform:translateY(-6px);border-color:#3d35c8;box-shadow:0 20px 46px rgba(61,53,200,0.11);background:#fafaf8;color:#3d35c8}
 .project-media{position:relative;width:100%;max-width:100%;aspect-ratio:4/3;border-bottom:1px solid #e2e0da;background:linear-gradient(135deg,#f2f1ee,#eceafd);overflow:hidden}
 .project-media img{width:100%;max-width:100%;height:100%;object-fit:cover;object-position:center bottom;display:block;transition:transform 0.32s ease,filter 0.32s ease}
 .project-card:hover .project-media img{transform:scale(1.035);filter:saturate(1.05)}
@@ -599,9 +606,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   .cur{display:none}
   nav{padding:1rem 1.25rem}
   .nav-links{gap:1rem}
+  .story-orb-sticky{top:56px;height:420px;margin-bottom:-420px}
+  .story-orb-stage{display:block;padding:0 1.25rem}
+  .story-orb-slot{height:420px;transform:none;align-items:flex-end}
   #hero{grid-template-columns:1fr;padding:7rem 1.25rem 4rem}
   .hero-left{transform:none}
-  .hero-right{height:auto;overflow:hidden;transform:none}
+  .hero-right{height:360px}
   .orb-wrap{width:100%;height:360px;min-width:0;min-height:320px}
   #projects,#about,#contact{padding-left:1.25rem;padding-right:1.25rem}
   #about{margin:0;max-width:none}
@@ -677,28 +687,35 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   </div>
 </nav>
 
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-eyebrow">Product & UX Designer</div>
-    <h1 class="hero-title">Shuqi Liu</h1>
-    <p class="hero-sub">Designing clearer, more reliable digital workflows — across B2B SaaS, mobile, and web. Based in Sydney.</p>
-    <button class="cta" onclick="showMain('projects')">
-      VIEW WORK <span class="arr">↓</span>
-    </button>
-  </div>
-  <div class="hero-right">
-    <div class="orb-wrap">
-      <canvas id="heroOrb" aria-label="Transparent morphing sphere visual"></canvas>
+<div class="home-story">
+  <div class="story-orb-sticky">
+    <div class="story-orb-stage">
+      <div class="story-orb-slot">
+        <div class="orb-wrap">
+          <canvas id="heroOrb" aria-label="Transparent morphing sphere visual"></canvas>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<section id="projects">
-  <div class="sec-header">
-    <span class="sec-num">SELECTED WORK</span>
-    <h2 class="sec-title">Projects</h2>
-  </div>
-  <div class="proj-list">
+  <section id="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Product & UX Designer</div>
+      <h1 class="hero-title">Shuqi Liu</h1>
+      <p class="hero-sub">Designing clearer, more reliable digital workflows — across B2B SaaS, mobile, and web. Based in Sydney.</p>
+      <button class="cta" onclick="showMain('projects')">
+        VIEW WORK <span class="arr">↓</span>
+      </button>
+    </div>
+    <div class="hero-right"></div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-header">
+      <span class="sec-num">SELECTED WORK</span>
+      <h2 class="sec-title">Projects</h2>
+    </div>
+    <div class="proj-list">
 
     <article class="project-card" onclick="showDetail('project-detail')">
       <div class="project-media">
@@ -781,8 +798,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
     </article>
 
-  </div>
-</section>
+    <div class="project-coming-soon" aria-label="More projects coming soon">More Projects Coming Soon.</div>
+
+    </div>
+  </section>
+</div>
 
 <section id="project-detail">
   <button class="back-btn" onclick="showMain('projects')">← BACK TO WORK</button>
@@ -2228,6 +2248,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 // ── CURSOR ──
 const cur = document.getElementById('cur');
 let cx=window.innerWidth/2, cy=window.innerHeight/2;
+const homeStory = document.querySelector('.home-story');
 const mainSections = ['hero','about','projects'];
 const detailSections = ['project-detail','digiguard-detail','edi-detail','resoil-detail','contact'];
 document.getElementById('hero').after(document.getElementById('about'));
@@ -2242,12 +2263,16 @@ if(aboutPortrait){
 }
 
 function showMain(target){
+  if(homeStory)homeStory.style.display='';
   mainSections.forEach(id=>{document.getElementById(id).style.display='';});
   detailSections.forEach(id=>{document.getElementById(id).style.display='none';});
+  resizeOrb();
   document.getElementById(target).scrollIntoView({behavior:'smooth'});
+  updateScrollProgress();
 }
 
 function showDetail(target){
+  if(homeStory)homeStory.style.display='none';
   mainSections.forEach(id=>{document.getElementById(id).style.display='none';});
   detailSections.forEach(id=>{document.getElementById(id).style.display='none';});
   document.getElementById(target).style.display=target==='contact'?'flex':'block';
@@ -2300,6 +2325,20 @@ function updateProjectNav(){
 document.addEventListener('mousemove', e=>{
   cx=e.clientX; cy=e.clientY;
   cur.style.left=cx+'px'; cur.style.top=cy+'px';
+  orbMouseTx=e.clientX/window.innerWidth-0.5;
+  orbMouseTy=e.clientY/window.innerHeight-0.5;
+  const projects=document.getElementById('projects');
+  const canFlow=finePointerQuery.matches&&!reducedMotionQuery.matches;
+  if(projects&&canFlow){
+    const rect=projects.getBoundingClientRect();
+    projectMouse.active=e.clientX>=rect.left&&e.clientX<=rect.right&&e.clientY>=rect.top&&e.clientY<=rect.bottom;
+    if(projectMouse.active){
+      projectMouse.x=e.clientX;
+      projectMouse.y=e.clientY;
+    }
+  }else{
+    projectMouse.active=false;
+  }
 });
 setupProjectNav();
 window.addEventListener('scroll',updateProjectNav,{passive:true});
@@ -2337,6 +2376,122 @@ document.querySelectorAll('.hero-title,.detail-list li,.phone-shot,.problem-step
 const orbCanvas=document.getElementById('heroOrb');
 const orbCtx=orbCanvas.getContext('2d');
 let orbMx=0, orbMy=0, orbTx=0, orbTy=0, orbT=0;
+let orbMouseTx=0, orbMouseTy=0;
+const reducedMotionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
+const finePointerQuery=window.matchMedia('(hover: hover) and (pointer: fine)');
+let projectMouse={x:0,y:0,sx:0,sy:0,active:false,initialized:false};
+let scrollProgress=0;
+let smoothedScrollProgress=0;
+let orbOpacity=1;
+let gridOpacity=1;
+let particleAmount=0;
+let particleSpread=0;
+let formationProgress=0;
+let outlineOpacity=0.28;
+let outlineWidth=1;
+const orbTimeline={
+  solid:0,
+  dissolve:0,
+  particleCloud:0,
+  projectFormation:0
+};
+const orbParticles=createOrbParticles(420);
+
+function createSeededRandom(seed){
+  let value=seed;
+  return ()=>{
+    value=(value*1664525+1013904223)>>>0;
+    return value/4294967296;
+  };
+}
+
+function createOrbParticles(count){
+  const random=createSeededRandom(73241);
+  const projectColumns=[-0.44,-0.23,0,0.23,0.44];
+  return Array.from({length:count},(_,index)=>{
+    const angle=random()*Math.PI*2;
+    const radius=Math.sqrt(random())*0.88;
+    const laneId=index%projectColumns.length;
+    const aboutAngle=random()*Math.PI*2;
+    const aboutRadius=Math.sqrt(random())*0.74;
+    const projectBand=random();
+    const projectX=projectColumns[laneId]+(random()*2-1)*(projectBand<0.22?0.09:0.045);
+    const projectY=projectBand<0.22
+      ? -0.37+random()*0.16
+      : -0.22+random()*0.78;
+    const originalPosition={
+      x:Math.cos(angle)*radius,
+      y:Math.sin(angle)*radius
+    };
+    return {
+      originalPosition,
+      aboutTarget:{
+        x:Math.cos(aboutAngle)*aboutRadius,
+        y:Math.sin(aboutAngle)*aboutRadius
+      },
+      projectTarget:{
+        x:projectX,
+        y:projectY
+      },
+      noiseOffset:{
+        x:random()*2-1,
+        y:random()*2-1
+      },
+      size:0.85+random()*1.95,
+      groupId:index%3,
+      densityRank:random(),
+      phase:random()*Math.PI*2
+    };
+  });
+}
+
+function clamp(value,min,max){
+  return Math.min(max,Math.max(min,value));
+}
+
+function smoothstep(value){
+  const t=clamp(value,0,1);
+  return t*t*(3-2*t);
+}
+
+function timelineRange(progress,start,end){
+  return smoothstep((progress-start)/(end-start));
+}
+
+function updateOrbTimeline(){
+  const progress=smoothedScrollProgress;
+  const gridOut=timelineRange(progress,0.1,0.3);
+  const fillOut=timelineRange(progress,0.24,0.54);
+  const outlineThin=timelineRange(progress,0.4,0.68);
+  const outlineOut=timelineRange(progress,0.56,0.82);
+  const dissolveIn=timelineRange(progress,0.18,0.54);
+  const cloudIn=timelineRange(progress,0.22,0.58);
+  const formationIn=timelineRange(progress,0.58,0.94);
+
+  orbTimeline.solid=1-dissolveIn;
+  orbTimeline.dissolve=dissolveIn*(1-cloudIn);
+  orbTimeline.particleCloud=cloudIn*(1-formationIn);
+  orbTimeline.projectFormation=formationIn;
+
+  orbOpacity=(1-fillOut*0.82)*(1-formationIn);
+  gridOpacity=(1-gridOut)*(1-formationIn);
+  outlineOpacity=(0.28-outlineThin*0.1)*(1-outlineOut);
+  outlineWidth=1-outlineThin*0.62;
+  particleAmount=cloudIn;
+  particleSpread=timelineRange(progress,0.26,0.66)*(1-formationIn*0.55);
+  formationProgress=formationIn;
+}
+
+function updateScrollProgress(){
+  if(!homeStory||getComputedStyle(homeStory).display==='none')return;
+  const hero=document.getElementById('hero');
+  const projects=document.getElementById('projects');
+  if(!hero||!projects)return;
+  const start=hero.offsetTop;
+  const end=projects.offsetTop;
+  const travel=Math.max(1,end-start);
+  scrollProgress=clamp((window.scrollY-start)/travel,0,1);
+}
 
 function resizeOrb(){
   const rect=orbCanvas.getBoundingClientRect();
@@ -2346,54 +2501,9 @@ function resizeOrb(){
   orbCtx.setTransform(dpr,0,0,dpr,0,0);
 }
 
-document.addEventListener('mousemove',e=>{
-  orbTx=(e.clientX/window.innerWidth-0.5);
-  orbTy=(e.clientY/window.innerHeight-0.5);
-});
-
-function drawOrb(){
-  orbT+=0.012;
-  orbMx+=(orbTx-orbMx)*0.055;
-  orbMy+=(orbTy-orbMy)*0.055;
-
-  const w=orbCanvas.clientWidth;
-  const h=orbCanvas.clientHeight;
-  const cx=w*0.5+orbMx*26;
-  const cy=h*0.5+orbMy*22;
-  const r=Math.min(w,h)*0.36;
-  orbCtx.clearRect(0,0,w,h);
+function drawOrbGrid(r){
   orbCtx.save();
-  orbCtx.translate(cx,cy);
-  orbCtx.rotate(orbMx*0.16);
-  orbCtx.scale(1+orbMy*0.035,1-orbMy*0.025);
-
-  const grad=orbCtx.createRadialGradient(-r*0.25,-r*0.35,r*0.05,0,0,r*1.1);
-  grad.addColorStop(0,'rgba(236,234,253,0.55)');
-  grad.addColorStop(0.48,'rgba(107,92,231,0.16)');
-  grad.addColorStop(1,'rgba(61,53,200,0.04)');
-
-  orbCtx.beginPath();
-  const points=160;
-  for(let i=0;i<=points;i++){
-    const a=(Math.PI*2*i)/points;
-    const wobble=1
-      +Math.sin(a*3+orbT*1.4)*0.035
-      +Math.sin(a*7-orbT*1.1)*0.018
-      +orbMx*Math.cos(a)*0.04
-      +orbMy*Math.sin(a)*0.035;
-    const x=Math.cos(a)*r*wobble;
-    const y=Math.sin(a)*r*wobble;
-    if(i===0)orbCtx.moveTo(x,y);else orbCtx.lineTo(x,y);
-  }
-  orbCtx.closePath();
-  orbCtx.fillStyle=grad;
-  orbCtx.fill();
-  orbCtx.strokeStyle='rgba(61,53,200,0.28)';
-  orbCtx.lineWidth=1;
-  orbCtx.stroke();
-  orbCtx.clip();
-
-  orbCtx.globalAlpha=0.72;
+  orbCtx.globalAlpha=gridOpacity*0.72;
   for(let i=-5;i<=5;i++){
     const yy=(i/5)*r*0.72;
     const width=Math.sqrt(Math.max(0,r*r-yy*yy))*1.72;
@@ -2425,25 +2535,167 @@ function drawOrb(){
     orbCtx.lineWidth=0.75;
     orbCtx.stroke();
   }
+  orbCtx.restore();
+}
 
-  orbCtx.globalAlpha=1;
-  for(let i=0;i<34;i++){
-    const a=i*2.399+orbT*0.15;
-    const rr=r*(0.12+((i*37)%100)/135);
-    const x=Math.cos(a)*rr+Math.sin(orbT+i)*3;
-    const y=Math.sin(a)*rr*0.9+Math.cos(orbT*0.8+i)*3;
-    const alpha=0.12+((i%7)/7)*0.2;
+function getProjectPointerDisplacement(x,y,projectProgress,cx,cy){
+  if(!projectMouse.active||projectProgress<0.08||!finePointerQuery.matches||reducedMotionQuery.matches)return {x:0,y:0};
+  const rect=orbCanvas.getBoundingClientRect();
+  const targetX=projectMouse.x-rect.left-cx;
+  const targetY=projectMouse.y-rect.top-cy;
+  if(!projectMouse.initialized){
+    projectMouse.sx=targetX;
+    projectMouse.sy=targetY;
+    projectMouse.initialized=true;
+  }
+  projectMouse.sx+=(targetX-projectMouse.sx)*0.12;
+  projectMouse.sy+=(targetY-projectMouse.sy)*0.12;
+  const dx=x-projectMouse.sx;
+  const dy=y-projectMouse.sy;
+  const distance=Math.sqrt(dx*dx+dy*dy)||1;
+  const radius=142;
+  if(distance>=radius)return {x:0,y:0};
+  const falloff=Math.pow(1-distance/radius,2);
+  const force=24*falloff*projectProgress;
+  return {
+    x:dx/distance*force,
+    y:dy/distance*force
+  };
+}
+
+function drawOrbParticles(r,w,h,cx,cy){
+  orbCtx.save();
+  orbParticles.forEach(particle=>{
+    const projectProgress=formationProgress;
+    const aboutProgress=getAboutFocus();
+    const cloud=particleAmount*(1-projectProgress);
+    const orbitAngle=orbT*0.16+particle.phase*0.14;
+    const aboutOrbit=cloud*(1-projectProgress)*(1-aboutProgress*0.35);
+    const orbitX=Math.cos(orbitAngle)*r*0.055*aboutOrbit;
+    const orbitY=Math.sin(orbitAngle)*r*0.08*aboutOrbit;
+    const projectFloatX=Math.sin(orbT*(0.2+particle.groupId*0.025)+particle.phase)*w*0.006*projectProgress;
+    const projectFloatY=Math.cos(orbT*(0.16+particle.groupId*0.02)+particle.phase)*h*0.008*projectProgress;
+    const driftX=Math.sin(orbT*0.58+particle.phase)*particle.noiseOffset.x*r*0.018;
+    const driftY=Math.cos(orbT*0.48+particle.phase)*particle.noiseOffset.y*r*0.018;
+    const spread=particleSpread*r*0.18;
+    const orbX=particle.originalPosition.x*r+particle.noiseOffset.x*spread;
+    const orbY=particle.originalPosition.y*r+particle.noiseOffset.y*spread;
+    const aboutX=particle.aboutTarget.x*r+orbitX;
+    const aboutY=particle.aboutTarget.y*r+orbitY;
+    const cloudX=orbX+(aboutX-orbX)*particleAmount;
+    const cloudY=orbY+(aboutY-orbY)*particleAmount;
+    const projectX=particle.projectTarget.x*w+projectFloatX;
+    const projectY=particle.projectTarget.y*h+projectFloatY;
+    const cursorPush=getProjectPointerDisplacement(projectX,projectY,projectProgress,cx,cy);
+    const x=cloudX+(projectX-cloudX)*projectProgress+driftX*(1-projectProgress*0.72)+cursorPush.x+orbMx*particle.noiseOffset.x*3*(1-projectProgress);
+    const y=cloudY+(projectY-cloudY)*projectProgress+driftY*(1-projectProgress*0.72)+cursorPush.y+orbMy*particle.noiseOffset.y*3*(1-projectProgress);
+    const densityFade=1-particleAmount*0.28*smoothstep((particle.densityRank-0.55)/0.45);
+    const aboutAlpha=(0.14+particle.groupId*0.026)*particleAmount*densityFade;
+    const projectAlpha=(0.026+particle.densityRank*0.028)*densityFade;
+    const alpha=(aboutAlpha+(projectAlpha-aboutAlpha)*projectProgress)*(1-projectProgress*0.28);
+    const aboutSize=particle.size*(0.58+particleAmount*0.18);
+    const projectSize=particle.size*0.46;
+    const size=(aboutSize+(projectSize-aboutSize)*projectProgress)*densityFade;
+
     orbCtx.beginPath();
-    orbCtx.arc(x,y,1.2+(i%3)*0.35,0,Math.PI*2);
+    orbCtx.arc(x,y,size,0,Math.PI*2);
     orbCtx.fillStyle=`rgba(61,53,200,${alpha})`;
     orbCtx.fill();
+  });
+  orbCtx.restore();
+}
+
+function getAboutFocus(){
+  const enter=timelineRange(smoothedScrollProgress,0.3,0.5);
+  const exit=timelineRange(smoothedScrollProgress,0.58,0.76);
+  return enter*(1-exit);
+}
+
+function getAboutOrbOffset(w,h,r){
+  const aboutFocus=getAboutFocus();
+  return {
+    x:w*0.5*aboutFocus,
+    y:-Math.min(h*0.1,r*0.3)*aboutFocus,
+    rotation:-0.18*aboutFocus
+  };
+}
+
+function drawOrb(){
+  smoothedScrollProgress+=(scrollProgress-smoothedScrollProgress)*0.075;
+  updateOrbTimeline();
+  orbTx=orbMouseTx;
+  orbTy=orbMouseTy;
+
+  orbT+=reducedMotionQuery.matches?0.003:0.012;
+  orbMx+=(orbTx-orbMx)*0.055;
+  orbMy+=(orbTy-orbMy)*0.055;
+
+  const w=orbCanvas.clientWidth;
+  const h=orbCanvas.clientHeight;
+  const r=Math.min(w,h)*0.36;
+  const aboutOffset=getAboutOrbOffset(w,h,r);
+  const aboutVisualFade=1-getAboutFocus();
+  const cx=w*0.5+aboutOffset.x+orbMx*26;
+  const cy=h*0.5+aboutOffset.y+orbMy*22;
+  orbCtx.clearRect(0,0,w,h);
+  orbCtx.save();
+  orbCtx.translate(cx,cy);
+  orbCtx.rotate(aboutOffset.rotation+orbMx*0.16);
+  orbCtx.scale(1+orbMy*0.035,1-orbMy*0.025);
+
+  const grad=orbCtx.createRadialGradient(-r*0.25,-r*0.35,r*0.05,0,0,r*1.1);
+  grad.addColorStop(0,'rgba(236,234,253,0.55)');
+  grad.addColorStop(0.48,'rgba(107,92,231,0.16)');
+  grad.addColorStop(1,'rgba(61,53,200,0.04)');
+
+  orbCtx.beginPath();
+  const points=160;
+  for(let i=0;i<=points;i++){
+    const a=(Math.PI*2*i)/points;
+    const wobble=1
+      +Math.sin(a*3+orbT*1.4)*0.035
+      +Math.sin(a*7-orbT*1.1)*0.018
+      +orbMx*Math.cos(a)*0.04
+      +orbMy*Math.sin(a)*0.035;
+    const x=Math.cos(a)*r*wobble;
+    const y=Math.sin(a)*r*wobble;
+    if(i===0)orbCtx.moveTo(x,y);else orbCtx.lineTo(x,y);
   }
+  orbCtx.closePath();
+  orbCtx.save();
+  orbCtx.globalAlpha=orbOpacity*aboutVisualFade;
+  orbCtx.fillStyle=grad;
+  orbCtx.fill();
+  orbCtx.restore();
+  orbCtx.strokeStyle=`rgba(61,53,200,${outlineOpacity*aboutVisualFade})`;
+  orbCtx.lineWidth=outlineWidth;
+  orbCtx.stroke();
+
+  orbCtx.save();
+  orbCtx.clip();
+  orbCtx.globalAlpha=aboutVisualFade;
+  drawOrbGrid(r);
+  orbCtx.restore();
+  if(projectMouse.active){
+    const projects=document.getElementById('projects');
+    if(projects){
+      const rect=projects.getBoundingClientRect();
+      projectMouse.active=projectMouse.x>=rect.left&&projectMouse.x<=rect.right&&projectMouse.y>=rect.top&&projectMouse.y<=rect.bottom;
+    }
+  }
+  if(!projectMouse.active)projectMouse.initialized=false;
+  drawOrbParticles(r,w,h,cx,cy);
 
   orbCtx.restore();
   requestAnimationFrame(drawOrb);
 }
 
 resizeOrb();
-window.addEventListener('resize',resizeOrb);
+updateScrollProgress();
+window.addEventListener('scroll',updateScrollProgress,{passive:true});
+window.addEventListener('resize',()=>{
+  resizeOrb();
+  updateScrollProgress();
+});
 drawOrb();
 </script>
