@@ -117,6 +117,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .detail-list li:hover{color:#0f0e0c;transform:translateX(4px)}
 .detail-list li:hover::before{transform:translateX(3px);color:#6b5ce7}
 .section-kicker{font-family:'DM Mono',monospace;font-size:11px;color:#8a8784;letter-spacing:0.1em;margin-bottom:0.75rem}
+.research-methods{font-family:'DM Mono',monospace;font-size:11px;color:#8a8784;letter-spacing:0.04em;margin:1.25rem 0 0.75rem}
 .placeholder-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}
 .placeholder-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
 .mini-placeholder{min-height:180px;border:1px dashed #b9b6b0;background:linear-gradient(135deg,#fafaf8,#f2f1ee);display:flex;align-items:center;justify-content:center;text-align:center;padding:1rem;color:#8a8784;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.06em;line-height:1.6;transition:transform 0.2s,border-color 0.2s,background 0.2s,color 0.2s}
@@ -131,6 +132,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .center-card{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:210px}
 .center-card p{margin-left:auto;margin-right:auto}
 .insight-map{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin:2rem 0 0;padding:1rem;border:1px solid #e2e0da;background:linear-gradient(135deg,#fff,#f7f7f2);overflow:hidden}
+.insight-map.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.insight-map.three::before{left:12%;right:12%}
 .insight-map::before{content:'';position:absolute;left:8%;right:8%;top:48px;height:1px;background:linear-gradient(90deg,transparent,#3d35c8,transparent);opacity:0.28}
 .insight-node{position:relative;min-height:260px;padding:1.15rem;border:1px solid rgba(61,53,200,0.16);background:rgba(255,255,255,0.82);display:flex;flex-direction:column;justify-content:flex-start;transition:transform 0.24s,border-color 0.24s,box-shadow 0.24s,background 0.24s}
 .insight-node::before{content:'';position:absolute;top:40px;left:50%;width:9px;height:9px;border-radius:50%;background:#3d35c8;box-shadow:0 0 0 7px rgba(61,53,200,0.08);transform:translate(-50%,-50%);transition:transform 0.24s,box-shadow 0.24s,background 0.24s}
@@ -141,6 +144,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .insight-node p{font-size:13px;line-height:1.65;color:#4a4845}
 .insight-node:hover h4{color:#3d35c8}
 .principle-system{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0.75rem;margin:2rem 0 0}
+.principle-system.three{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
 .principle-tile{position:relative;min-height:300px;padding:1rem;border:1px solid #e2e0da;background:#fafaf8;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:transform 0.24s,border-color 0.24s,box-shadow 0.24s,background 0.24s}
 .principle-tile::before{content:'';position:absolute;inset:auto -20% -34% -20%;height:54%;background:radial-gradient(circle at 50% 0,rgba(61,53,200,0.13),transparent 62%);opacity:0;transition:opacity 0.24s,transform 0.24s}
 .principle-tile:hover{transform:translateY(-7px);border-color:#3d35c8;background:#fff;box-shadow:0 18px 38px rgba(61,53,200,0.09)}
@@ -221,7 +225,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .component-card h4{font-family:inherit;font-size:15px;color:#0f0e0c;letter-spacing:0;margin:0 0 0.35rem;font-weight:500}
 .component-card p{font-size:12px;line-height:1.55;margin:0;color:#4a4845}
 .component-masonry{display:block;columns:3 220px;column-gap:1rem;margin:1.5rem 0}
-.component-masonry .component-card{display:inline-flex;width:100%;margin:0 0 1rem;break-inside:avoid;page-break-inside:avoid}
+.component-masonry .component-card{display:inline-flex;width:100%;margin:0 0 1rem;break-inside:avoid;page-break-inside:avoid;justify-content:flex-start}
 .final-design-board{margin:2rem 0 0;padding:1rem;border:1px solid #f3cbbb;border-radius:8px;background:linear-gradient(135deg,#fffaf6,#fff2f5);box-shadow:0 18px 42px rgba(255,45,85,0.08);display:grid;gap:0.8rem}
 .final-panel{border:1px solid rgba(255,45,85,0.18);border-radius:8px;background:rgba(255,255,255,0.72);padding:0.8rem;overflow:hidden}
 .final-panel-label{display:inline-flex;align-items:center;gap:0.35rem;border-radius:999px;background:#ffd8c7;color:#0f0e0c;font-family:'DM Mono',monospace;font-size:10px;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;padding:0.25rem 0.65rem;margin-bottom:0.75rem}
@@ -286,7 +290,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .mood-caption-media{flex:1;min-height:0;overflow:hidden;background:#111}
 .mood-caption-media img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
 .mood-caption-text{padding:0.75rem 0.85rem;font-size:clamp(10px,0.85vw,13px);line-height:1.45;color:#2f3438;font-weight:300;text-align:left}
-.challenge-principles .principle-card{min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.65rem 1.25rem}
+.challenge-principles .principle-card{min-height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1.1rem 1rem}
+.challenge-principles .principle-card h4{margin-bottom:0}
 .challenge-icon{position:relative;width:34px;height:34px;margin-bottom:1rem;border:1px solid rgba(61,53,200,0.35);display:flex;align-items:center;justify-content:center;color:#3d35c8;background:rgba(61,53,200,0.05);transition:transform 0.22s,border-color 0.22s,background 0.22s,color 0.22s}
 .challenge-icon::after{content:'';position:absolute;left:50%;top:50%;width:4px;height:4px;border-radius:50%;background:#3d35c8;opacity:0;transform:translate(-50%,-50%) scale(0.3)}
 .challenge-icon svg{display:block;width:20px;height:20px;stroke-width:1.8}
@@ -304,6 +309,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .detail-image{display:block;width:100%;height:auto;margin:1.5rem 0;border:1px solid #e2e0da;background:#fafaf8;cursor:zoom-in;transition:transform 0.22s,border-color 0.22s,box-shadow 0.22s}
 .detail-image:hover{transform:translateY(-4px);border-color:#3d35c8;box-shadow:0 16px 36px rgba(15,14,12,0.08)}
 .detail-image.narrow-image{width:min(100%,760px);margin-left:auto;margin-right:auto}
+.image-caption{font-size:12px;color:#8a8784;line-height:1.5;margin:-0.85rem 0 0}
 .motorplatform-context-image{width:100%;height:clamp(210px,26vw,350px);object-fit:cover;object-position:center bottom}
 .annotated-block .detail-image{margin-top:0;margin-bottom:0}
 .annotated-block:has(.decision-image-40){grid-template-columns:minmax(420px,40vw) minmax(240px,1fr)}
@@ -407,6 +413,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .challenge-quote:hover{transform:translateY(-4px);border-color:#3d35c8;box-shadow:0 18px 40px rgba(61,53,200,0.1)}
 .goals-layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,0.75fr);gap:1rem;align-items:start}
 .goals-copy{padding-left:clamp(1rem,3vw,3.5rem)}
+.goals-copy h3:first-child{margin-top:0}
 .goals-copy .detail-list:first-child{margin-top:0}
 .metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.75rem;margin:0;padding-right:clamp(1rem,3vw,3.5rem)}
 .metric-grid .metric-card:nth-child(5){grid-column:1 / -1;width:calc(50% - 0.375rem);justify-self:center}
@@ -428,6 +435,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .icon-eye circle{fill:#3d35c8;stroke:none}
 .metric-card:hover .eye-pupil{animation:eyeLook 0.95s ease-out}
 .metric-card:hover .eye-lid{animation:eyeBlink 0.95s ease-out;transform-origin:center}
+.outcome-summary{display:grid;gap:1.25rem;margin:1.5rem 0 2rem}
+.outcome-row{display:grid;grid-template-columns:minmax(150px,0.28fr) minmax(0,1fr);gap:1.5rem;padding:1.1rem 0;border-top:1px solid #e2e0da}
+.outcome-row:first-child{border-top:0;padding-top:0}
+.outcome-row h3{margin:0;font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#3d35c8}
+.outcome-row .detail-list{margin:0}
+.contribution-list{display:grid;gap:1rem;margin:1.25rem 0 0}
+.contribution-item{border-top:1px solid #e2e0da;padding-top:1rem}
+.contribution-item:first-child{border-top:0;padding-top:0}
+.contribution-item h4{font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#3d35c8;margin:0 0 0.35rem}
+.contribution-item p{margin:0}
 @keyframes iconBurst{
   0%{opacity:0.9;box-shadow:0 0 0 #3d35c8,0 0 0 #6b5ce7,0 0 0 #3d35c8,0 0 0 #6b5ce7;transform:translate(-50%,-50%) scale(0.3)}
   100%{opacity:0;box-shadow:-18px -14px 0 #3d35c8,17px -16px 0 #6b5ce7,20px 12px 0 #3d35c8,-15px 16px 0 #6b5ce7;transform:translate(-50%,-50%) scale(1)}
@@ -439,6 +456,39 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 @keyframes eyeLook{0%,100%{transform:translateX(0)}22%{transform:translateX(-4px)}48%{transform:translateX(4px)}70%{transform:translateX(0)}}
 @keyframes eyeBlink{0%,64%,100%{transform:scaleY(1)}72%,80%{transform:scaleY(0.12)}}
 .annotated-block{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:1.5rem;align-items:start;margin:1.5rem 0 2rem}
+.response-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,0.85fr);gap:1.5rem;align-items:start;margin:1.5rem 0 2rem}
+.response-layout.image-narrow{grid-template-columns:minmax(260px,360px) 1fr}
+.response-images{display:grid;gap:1rem}
+.response-images .detail-image{margin:0}
+.response-notes{display:grid;gap:1rem;border-top:1px solid #e2e0da}
+.response-note{padding-top:1rem;border-bottom:1px solid #e2e0da;padding-bottom:1rem}
+.response-note h4{font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#3d35c8;margin:0 0 0.35rem}
+.response-note p{margin:0}
+.inclusive-content-board{margin:1.5rem 0 0;padding:1.35rem;border:1px solid #e2e0da;border-radius:8px;background:linear-gradient(135deg,#fff,#fbfbff);box-shadow:0 16px 36px rgba(15,14,12,0.05)}
+.inclusive-content-head{display:grid;grid-template-columns:minmax(150px,0.7fr) minmax(190px,1fr) 28px minmax(190px,1fr) minmax(220px,1fr);gap:1rem;align-items:end;margin:0 0 0.7rem;padding:0 0.4rem}
+.inclusive-content-head span{font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.14em;color:#8a8784}
+.inclusive-content-head .before-label{color:#c84545}
+.inclusive-content-head .after-label{color:#3f8c4c}
+.inclusive-content-head .rationale-label{color:#3d35c8}
+.inclusive-content-row{display:grid;grid-template-columns:minmax(150px,0.7fr) minmax(190px,1fr) 28px minmax(190px,1fr) minmax(220px,1fr);gap:1rem;align-items:stretch;padding:1rem 0.4rem;border:1px solid #e9e7e2;border-radius:8px;background:rgba(255,255,255,0.72);margin-bottom:0.85rem}
+.inclusive-topic{display:grid;gap:0.28rem;justify-items:center;text-align:center;align-content:center}
+.inclusive-topic-num{width:38px;height:38px;border-radius:999px;background:#eceafd;color:#3d35c8;font-family:'DM Mono',monospace;font-size:12px;display:flex;align-items:center;justify-content:center}
+.inclusive-topic h4{font-size:15px;line-height:1.35;margin:0;color:#0f0e0c}
+.inclusive-topic p{font-size:13px;line-height:1.55;margin:0;color:#4a4845}
+.inclusive-example{min-height:132px;border:1px solid #e2e0da;border-radius:8px;background:#fff;padding:1rem;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.inclusive-example-label{font-size:12px;color:#4a4845;margin-bottom:0.65rem}
+.inclusive-message,.inclusive-input,.inclusive-heading-box{min-height:48px;border:1px solid #dfddd7;border-radius:5px;background:#fafaf8;padding:0.75rem;font-size:13px;color:#0f0e0c;display:flex;align-items:center;justify-content:center;text-align:center}
+.inclusive-message.before{border-color:#f1c9c9;background:#fff3f3}
+.inclusive-message.after{border-color:#d2e4d2;background:#f3faf3}
+.inclusive-caption{font-size:12px;margin:0.7rem 0 0}
+.inclusive-caption.before{color:#c84545}
+.inclusive-caption.after{color:#3f8c4c}
+.inclusive-arrow{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;color:#8a8784;font-size:18px}
+.inclusive-rationale{min-height:132px;display:grid;grid-template-columns:1fr;gap:0.8rem;align-items:center;text-align:center;padding:1rem;border-radius:8px;background:#f7f6ff}
+.inclusive-rationale h4{font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#3d35c8;margin:0 0 0.45rem}
+.inclusive-rationale p{font-size:13px;line-height:1.55;margin:0;color:#0f0e0c}
+.inclusive-why{display:flex;gap:0.75rem;align-items:center;margin-top:1.15rem;padding:1rem;border-radius:8px;background:#f7f6ff;color:#2d2b3f;font-size:13px;line-height:1.5}
+.inclusive-why strong{color:#2b268c}
 .interactive-annotated-block{align-items:center}
 .phone-frame{border:1px solid #0f0e0c;border-radius:28px;padding:0.75rem;background:#0f0e0c;max-width:320px;transition:transform 0.22s,box-shadow 0.22s}
 .phone-frame:hover{box-shadow:0 18px 38px rgba(15,14,12,0.14)}
@@ -518,6 +568,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .wire-note{display:grid;grid-template-columns:24px 1fr;gap:0.75rem;padding:0.75rem 0;border-bottom:1px solid #e2e0da;font-size:13px;color:#4a4845;line-height:1.5}
 .wire-note span{font-family:'DM Mono',monospace;color:#3d35c8;font-size:11px}
 .wire-notes .wire-note{padding-left:0.75rem}
+.wire-note.full-note{grid-template-columns:1fr;padding-left:0}
+.wire-note.full-note strong{display:block;font-family:'DM Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:#3d35c8;margin-bottom:0.3rem}
 .wire-note.active{background:#eceafd;border-bottom-color:#3d35c8;transform:translateX(4px)}
 .wire-note.note-gap-after{margin-bottom:4.5rem}
 .frame-tag{display:inline-flex;vertical-align:middle;margin-left:0.65rem;padding:0.3rem 0.5rem;border:1px solid rgba(61,53,200,0.28);background:#eceafd;color:#3d35c8;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.08em;line-height:1.2}
@@ -635,8 +687,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   .language-item:first-child{border-top:0}
   .detail-meta,.scope-grid,.outcome-grid,.placeholder-grid,.placeholder-grid.two,.principle-grid,.ui-showcase{grid-template-columns:1fr}
   .insight-map{grid-template-columns:1fr}
+  .insight-map.three{grid-template-columns:1fr}
   .insight-map::before{top:1rem;bottom:1rem;left:50%;right:auto;width:1px;height:auto}
+  .insight-map.three::before{top:1rem;bottom:1rem;left:50%;right:auto;width:1px;height:auto}
   .principle-system{grid-template-columns:1fr}
+  .principle-system.three{grid-template-columns:1fr}
   .habit-loop,.process-timeline,.resoil-insight-grid,.strategy-grid{grid-template-columns:1fr}
   .habit-arrow{transform:rotate(90deg)}
   .habit-arrow:hover{transform:rotate(90deg) translateX(3px)}
@@ -653,8 +708,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   .resoil-decision-image{height:auto;width:100%}
   .ui-screen-card img{width:100%;height:auto}
   .goals-layout,.metric-grid,.annotated-block{grid-template-columns:1fr}
+  .response-layout{grid-template-columns:1fr}
+  .response-layout.image-narrow{grid-template-columns:1fr}
+  .inclusive-content-head{display:none}
+  .inclusive-content-row{grid-template-columns:1fr;gap:0.75rem}
+  .inclusive-arrow{text-align:left}
+  .inclusive-rationale{grid-template-columns:1fr}
   .annotated-block:has(.decision-image-40){grid-template-columns:1fr}
   .goals-copy,.metric-grid{padding-left:0;padding-right:0}
+  .outcome-row{grid-template-columns:1fr;gap:0.75rem}
   .metric-grid .metric-card:nth-child(5){grid-column:auto;width:100%}
   .flowchart{padding:1rem}
   .flow-node{width:100%}
@@ -683,6 +745,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <button class="nav-link" onclick="showMain('hero')">HOME</button>
     <button class="nav-link" onclick="showMain('about')">ABOUT</button>
     <button class="nav-link" onclick="showMain('projects')">PROJECTS</button>
+    <a class="nav-link" href="/Users/liushuqi/Downloads/suki_portfolio_assets/suki-resume-2026.pdf" target="_blank" rel="noopener noreferrer">RESUME</a>
     <button class="nav-link" onclick="showDetail('contact')">CONTACT</button>
   </div>
 </nav>
@@ -719,7 +782,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
     <article class="project-card" onclick="showDetail('project-detail')">
       <div class="project-media">
-        <img src="suki_portfolio_assets/project-1-motorplatform.png" alt="MotorPlatform vehicle record and media action sheet preview">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/project-1-motorplatform.png" alt="MotorPlatform vehicle record and media action sheet preview">
       </div>
       <div class="project-card-body">
         <div class="project-card-top">
@@ -740,7 +803,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
     <article class="project-card" onclick="showDetail('digiguard-detail')">
       <div class="project-media">
-        <img src="suki_portfolio_assets/project-2-digiguard.png" alt="DigiGuard smart home security mobile app preview">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/project-2-digiguard.png" alt="DigiGuard smart home security mobile app preview">
       </div>
       <div class="project-card-body">
         <div class="project-card-top">
@@ -760,7 +823,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
     <article class="project-card" onclick="showDetail('edi-detail')">
       <div class="project-media">
-        <img src="suki_portfolio_assets/project-3-edi.png" alt="EDI inclusive access and representation project preview">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/project-3-edi.png" alt="EDI inclusive access and representation project preview">
       </div>
       <div class="project-card-body">
         <div class="project-card-top">
@@ -780,7 +843,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
     <article class="project-card" onclick="showDetail('resoil-detail')">
       <div class="project-media">
-        <img src="suki_portfolio_assets/project-4-resoil.png" alt="ReSoil sustainability habit app project preview">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/project-4-resoil.png" alt="ReSoil sustainability habit app project preview">
       </div>
       <div class="project-card-body">
         <div class="project-card-top">
@@ -808,7 +871,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   <button class="back-btn" onclick="showMain('projects')">← BACK TO WORK</button>
   <div class="detail-hero">
     <div class="brand-lockup">
-      <img src="suki_portfolio_assets/motorplatform-logo.png" alt="MotorPlatform logo">
+      <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/motorplatform-logo.png" alt="MotorPlatform logo">
     </div>
     <div class="detail-tag">Hero / Project Intro</div>
     <h1 class="detail-title">MotorPlatform — Product & UX Design for Automotive Operations</h1>
@@ -857,7 +920,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div class="diagram-arrow">→</div>
       <div class="diagram-node">Operations decision / valuation / next action</div>
     </div>
-    <img class="detail-image motorplatform-context-image" src="suki_portfolio_assets/motorplatform-context-overview.png" alt="MotorPlatform product context workflow overview visual">
+    <img class="detail-image motorplatform-context-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/motorplatform-context-overview.png" alt="MotorPlatform product context workflow overview visual">
   </div>
 
   <div class="detail-section">
@@ -969,19 +1032,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h2>Goals & Success Metrics</h2>
     <div class="goals-layout">
       <div class="goals-copy">
+        <h3>Design Goals</h3>
         <ul class="detail-list">
-          <li>Guide users to take the right photo</li>
-          <li>Improve photo quality without blocking users</li>
-          <li>Reduce retakes and post-upload corrections</li>
-          <li>Ensure required photo coverage</li>
-          <li>Enable quality visibility for managers</li>
+          <li>Guide users to capture the correct vehicle photos</li>
+          <li>Improve photo quality without disrupting the capture flow</li>
+          <li>Reduce unnecessary retakes and post-upload corrections</li>
+          <li>Ensure all required vehicle views are captured</li>
+          <li>Give managers visibility into photo completeness and quality</li>
         </ul>
+        <h3>How success will be measured</h3>
         <ul class="detail-list">
-          <li>Percentage of listings meeting photo requirements on first pass</li>
-          <li>Reduction in average retakes per listing</li>
-          <li>Time to complete full photo set</li>
+          <li>First-pass photo completion rate</li>
+          <li>Average retakes per listing</li>
+          <li>Time to complete the required photo set</li>
           <li>Average photo quality score</li>
-          <li>Manager-reported reduction in coaching overhead</li>
+          <li>Manager-reported coaching effort</li>
         </ul>
       </div>
       <div class="metric-grid">
@@ -1077,7 +1142,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div>
         <div class="phone-frame interactive-phone">
           <div class="phone-ui-wrap">
-            <img class="phone-ui-image" src="suki_portfolio_assets/design-decision-1-camera.png" alt="Guided camera screen for vehicle photo capture">
+            <img class="phone-ui-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/design-decision-1-camera.png" alt="Guided camera screen for vehicle photo capture">
             <button class="ui-hotspot" data-anchor="a" type="button" aria-label="Expected photo label"></button>
             <button class="ui-hotspot" data-anchor="b" type="button" aria-label="Vehicle silhouette guide"></button>
             <button class="ui-hotspot" data-anchor="c" type="button" aria-label="Capture button"></button>
@@ -1099,7 +1164,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div>
         <div class="phone-frame interactive-phone">
           <div class="phone-ui-wrap">
-            <img class="phone-ui-image" src="suki_portfolio_assets/design-decision-2-camera.png" alt="After capture camera screen with saved thumbnail">
+            <img class="phone-ui-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/design-decision-2-camera.png" alt="After capture camera screen with saved thumbnail">
             <button class="ui-hotspot thumb-anchor" data-anchor="a" type="button" aria-label="Saved photo thumbnail"></button>
           </div>
         </div>
@@ -1117,7 +1182,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div>
         <div class="phone-frame interactive-phone dd3-phone">
           <div class="phone-ui-wrap">
-            <img class="phone-ui-image" src="suki_portfolio_assets/design-decision-3-media.png" alt="Camera screen at the end of the capture process">
+            <img class="phone-ui-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/design-decision-3-media.png" alt="Camera screen at the end of the capture process">
             <button class="ui-hotspot" data-anchor="a" type="button" aria-label="End of process without silhouette"></button>
             <button class="ui-hotspot" data-anchor="b" type="button" aria-label="Photo count thumbnail"></button>
             <button class="ui-hotspot" data-anchor="c" type="button" aria-label="Close process"></button>
@@ -1137,7 +1202,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div>
         <div class="phone-frame interactive-phone dd4-phone">
           <div class="phone-ui-wrap">
-            <img class="phone-ui-image" src="suki_portfolio_assets/design-decision-4-media.png" alt="Media gallery with saved photos and remaining required photo placeholders">
+            <img class="phone-ui-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/design-decision-4-media.png" alt="Media gallery with saved photos and remaining required photo placeholders">
             <button class="ui-hotspot" data-anchor="a" type="button" aria-label="Saved photos remain visible"></button>
             <button class="ui-hotspot" data-anchor="b" type="button" aria-label="Incomplete placeholder status"></button>
             <button class="ui-hotspot" data-anchor="c" type="button" aria-label="Resume from placeholder"></button>
@@ -1157,7 +1222,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div>
         <div class="phone-frame interactive-phone dd5-phone">
           <div class="phone-ui-wrap">
-            <img class="phone-ui-image" src="suki_portfolio_assets/design-decision-5-media.png" alt="Media preview grid with selected vehicle photos">
+            <img class="phone-ui-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/design-decision-5-media.png" alt="Media preview grid with selected vehicle photos">
             <button class="ui-hotspot" data-anchor="a" type="button" aria-label="Full photo preview"></button>
             <button class="ui-hotspot select-all-anchor" data-anchor="b" type="button" aria-label="Select all delete option"></button>
             <button class="ui-hotspot box-anchor-1" data-anchor="b" type="button" aria-label="Photo selection checkbox"></button>
@@ -1185,7 +1250,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div>
         <div class="phone-frame interactive-phone dd6-phone">
           <div class="phone-ui-wrap">
-            <img class="phone-ui-image" src="suki_portfolio_assets/design-decision-6-wireframe.png" alt="Wireframe concept for non-blocking AI feedback">
+            <img class="phone-ui-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/design-decision-6-wireframe.png" alt="Wireframe concept for non-blocking AI feedback">
             <button class="ui-hotspot" data-anchor="a" type="button" aria-label="Non-blocking warning text"></button>
             <button class="ui-hotspot" data-anchor="b" type="button" aria-label="Continue remains available"></button>
             <button class="ui-hotspot" data-anchor="c" type="button" aria-label="Retake suggested primary action"></button>
@@ -1224,17 +1289,33 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="detail-section">
     <h2>Design Outcome</h2>
-    <div class="outcome-grid">
-      <div class="outcome-card"><h4>Outcome 1</h4><p>Clearer capture flow</p></div>
-      <div class="outcome-card"><h4>Outcome 2</h4><p>Fewer ambiguities during photo taking</p></div>
-      <div class="outcome-card"><h4>Outcome 3</h4><p>Better support for interrupted workflows</p></div>
-      <div class="outcome-card"><h4>Outcome 4</h4><p>Better review readiness</p></div>
+    <div class="outcome-summary">
+      <div class="outcome-row">
+        <h3>Delivered</h3>
+        <ul class="detail-list">
+          <li>Finalised the V1 capture flow and key edge cases</li>
+          <li>Prepared the experience for engineering implementation</li>
+          <li>Defined a scalable foundation for future AI-assisted photo quality checks</li>
+        </ul>
+      </div>
+      <div class="outcome-row">
+        <h3>Team Validation</h3>
+        <ul class="detail-list">
+          <li>Reviewed with Product and Engineering during design handoff</li>
+          <li>Refined interaction states and edge cases based on implementation feedback</li>
+          <li>Approved for development as the V1 capture experience</li>
+        </ul>
+      </div>
+      <div class="outcome-row">
+        <h3>Next Measurement</h3>
+        <ul class="detail-list">
+          <li>First-pass completion rate</li>
+          <li>Retakes per listing</li>
+          <li>Capture completion time</li>
+          <li>Manager coaching effort</li>
+        </ul>
+      </div>
     </div>
-    <br>
-    <p>The proposed Photo Flow created a clearer and more controlled capture experience. By combining visual guidance, sequential capture, auto-save, progress visibility, and final preview, the flow helped users understand what to capture, move through the required photo set efficiently, and review their photos before submission.</p>
-    <br>
-    <p>Although advanced AI validation was scoped for V2, the V1 structure established a foundation for future quality checks and scoring by making the capture process more consistent and trackable.</p>
-    <br>
     <table class="decision-table">
       <thead>
         <tr><th>BEFORE</th><th>AFTER</th></tr>
@@ -1297,13 +1378,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h2>Project Overview</h2>
     <p>DigiGuard is a digital protection product concept developed during my work at Cultiv8 Group. The project focused on building a visual identity and digital interface that communicates security, reliability, and ease of use.</p>
     <p>My role was to explore the brand direction, define the visual style, design key digital touchpoints, and create a consistent UI experience that could help users quickly understand the product's value.</p>
-    <img class="detail-image" src="suki_portfolio_assets/digiguard-project-overview.png" alt="DigiGuard smart home security brand and product overview visual">
-  </div>
-
-  <div class="detail-section">
-    <h2>Design Context</h2>
-    <p>For a digital security product, visual trust is critical. Users need to quickly understand what the product does, why it matters, and whether the brand feels reliable enough to protect their information or digital assets.</p>
-    <p>The design challenge was not only to make the interface look polished, but also to create a visual language that feels secure, professional, and approachable.</p>
+    <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-project-overview.png" alt="DigiGuard smart home security brand and product overview visual">
   </div>
 
   <div class="detail-section">
@@ -1320,7 +1395,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           </svg>
         </div>
         <h4>01 / Build Trust Quickly</h4>
-        <p>The product needs to feel credible within the first few seconds.</p>
       </div>
       <div class="principle-card challenge-card-value">
         <div class="challenge-icon" aria-hidden="true">
@@ -1331,7 +1405,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           </svg>
         </div>
         <h4>02 / Explain Value Clearly</h4>
-        <p>Users should understand the product purpose without technical overload.</p>
       </div>
       <div class="principle-card challenge-card-approach">
         <div class="challenge-icon" aria-hidden="true">
@@ -1341,7 +1414,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           </svg>
         </div>
         <h4>03 / Keep It Approachable</h4>
-        <p>Security products can feel intimidating, so the UI should feel clear and easy to navigate.</p>
       </div>
     </div>
   </div>
@@ -1351,12 +1423,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <p>As a Brand and UI Designer, I worked on the visual direction and digital interface for DigiGuard. My role focused on translating the product's security-focused positioning into a clear, consistent, and trustworthy visual experience.</p>
     <h3>Key Responsibilities</h3>
     <ul class="detail-list">
-      <li>Explored brand direction and visual references</li>
-      <li>Defined colour, typography, icon, and layout direction</li>
-      <li>Designed key web and product interface screens</li>
-      <li>Created reusable UI components for consistency</li>
-      <li>Refined visual hierarchy and content presentation</li>
-      <li>Prepared design assets for presentation and handoff</li>
+      <li>Defined brand and visual direction</li>
+      <li>Designed key web and product screens</li>
+      <li>Built reusable UI components</li>
+      <li>Prepared design assets for handoff</li>
     </ul>
   </div>
 
@@ -1375,38 +1445,32 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
         <p>Smart home security that adapts to modern life. Seamless protection, intelligent alerts, complete peace of mind.</p>
         <p>Themes: Protection, intelligence, trust, simplicity, connection, warmth.</p>
       </div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-02.png" alt="DigiGuard mood board color palette reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-02.png" alt="DigiGuard mood board color palette reference"></div>
       <div class="mood-placeholder mood-caption-card">
-        <div class="mood-caption-media"><img src="suki_portfolio_assets/digiguard-mood-placeholder-03.png" alt="DigiGuard pixelated house motif"></div>
+        <div class="mood-caption-media"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-03.png" alt="DigiGuard pixelated house motif"></div>
         <div class="mood-caption-text">The pixelated house motif represents smart protection that's always learning.</div>
       </div>
       <div class="mood-placeholder mood-caption-card">
-        <div class="mood-caption-media"><img src="suki_portfolio_assets/digiguard-mood-placeholder-04-clean.png" alt="Family using smart home security at home"></div>
+        <div class="mood-caption-media"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-04-clean.png" alt="Family using smart home security at home"></div>
         <div class="mood-caption-text">Peace of mind at home.<br>So you can focus on what matters.</div>
       </div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-05.png" alt="DigiGuard mood board image reference"></div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-06.png" alt="DigiGuard mood board image reference"></div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-07.png" alt="DigiGuard mood board image reference"></div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-08.png" alt="DigiGuard mood board image reference"></div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-09.png" alt="DigiGuard mood board image reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-05.png" alt="DigiGuard mood board image reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-06.png" alt="DigiGuard mood board image reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-07.png" alt="DigiGuard mood board image reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-08.png" alt="DigiGuard mood board image reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-09.png" alt="DigiGuard mood board image reference"></div>
       <div class="mood-placeholder mood-caption-card">
-        <div class="mood-caption-media"><img src="suki_portfolio_assets/digiguard-mood-placeholder-10.png" alt="DigiGuard layered protection visual reference"></div>
+        <div class="mood-caption-media"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-10.png" alt="DigiGuard layered protection visual reference"></div>
         <div class="mood-caption-text">Layers of protection.<br>Designed to adapt and respond.</div>
       </div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-11.png" alt="DigiGuard mood board image reference"></div>
-      <div class="mood-placeholder"><img src="suki_portfolio_assets/digiguard-mood-placeholder-12.png" alt="DigiGuard mood board image reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-11.png" alt="DigiGuard mood board image reference"></div>
+      <div class="mood-placeholder"><img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-mood-placeholder-12.png" alt="DigiGuard mood board image reference"></div>
     </div>
   </div>
 
   <div class="detail-section">
     <h2>Brand System</h2>
     <p>I developed a visual system that could support both marketing communication and digital interface design. The system focused on consistency across colour, typography, iconography, spacing, and visual elements.</p>
-    <div class="outcome-grid">
-      <div class="outcome-card"><h4>Colour</h4><p>Darker tones communicate security, while brighter accents guide attention to key actions.</p></div>
-      <div class="outcome-card"><h4>Typography</h4><p>The typography direction focused on clarity and professionalism for quick scanning.</p></div>
-      <div class="outcome-card"><h4>Iconography</h4><p>Icons explain security-related features quickly and reduce reliance on long technical descriptions.</p></div>
-      <div class="outcome-card"><h4>Layout System</h4><p>Clear spacing, card-based sections, and strong hierarchy make product information easier to understand.</p></div>
-    </div>
     <div class="visual-board" aria-label="DigiGuard visual direction board built with HTML and CSS">
       <div class="visual-board-kicker">Visual Direction</div>
       <div class="visual-board-subtitle">Brand system, graphic motif, and color language</div>
@@ -1416,16 +1480,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
         <div>
           <div class="visual-board-label">1. Primary Logo</div>
           <div class="visual-logo-card">
-            <img src="suki_portfolio_assets/digiguard-primary-logo.png" alt="DigiGuard smart home security primary logo">
+            <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-primary-logo.png" alt="DigiGuard smart home security primary logo">
           </div>
 
           <div class="visual-board-label" style="margin-top:1.45rem">2. Secondary Logo Variations</div>
           <div class="visual-variations">
             <div class="visual-mini-logo">
-              <img src="suki_portfolio_assets/digiguard-logo-red-variation.png" alt="DigiGuard red logo variation">
+              <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-logo-red-variation.png" alt="DigiGuard red logo variation">
             </div>
             <div class="visual-mini-logo dark">
-              <img src="suki_portfolio_assets/digiguard-logo-black-variation.png" alt="DigiGuard dark logo variation">
+              <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-logo-black-variation.png" alt="DigiGuard dark logo variation">
             </div>
           </div>
         </div>
@@ -1433,7 +1497,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
         <div class="visual-motif-panel">
           <div class="visual-board-label">4. Graphic Motif</div>
           <div class="motif-stage">
-            <img class="motif-image" src="suki_portfolio_assets/digiguard-graphic-motif.png" alt="DigiGuard pixel house graphic motif">
+            <img class="motif-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-graphic-motif.png" alt="DigiGuard pixel house graphic motif">
           </div>
         </div>
       </div>
@@ -1481,135 +1545,80 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </div>
   </div>
 
-  <div class="detail-section">
-    <h2>UI Direction</h2>
-    <p>After defining the brand direction, I translated it into key UI screens and digital touchpoints. The interface was designed to help users quickly understand the product value, explore key features, and take action with confidence.</p>
-    <div class="principle-grid">
-      <div class="principle-card ui-direction-card">
-        <h4>Clear First Impression</h4>
-        <p>The hero section should immediately communicate what DigiGuard does.</p>
-        <div class="ui-screen-card">
-          <img src="suki_portfolio_assets/digiguard-ui-direction-02.png" alt="DigiGuard clear first impression UI screen">
-        </div>
-      </div>
-      <div class="principle-card ui-direction-card">
-        <h4>Scannable Feature Explanation</h4>
-        <p>Feature cards and icons help users understand benefits quickly.</p>
-        <div class="ui-screen-card">
-          <img src="suki_portfolio_assets/digiguard-ui-direction-04.png" alt="DigiGuard scannable feature explanation UI screen">
-        </div>
-      </div>
-      <div class="principle-card ui-direction-card">
-        <h4>Strong Call-to-action</h4>
-        <p>Primary actions are visually clear and placed where users naturally make decisions.</p>
-        <div class="ui-screen-card">
-          <img src="suki_portfolio_assets/digiguard-ui-direction-03.png" alt="DigiGuard strong call to action UI screen">
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="detail-section decision-section">
     <h2>Key Design Decisions</h2>
     <h3>Design Decision 1: Use visual hierarchy to build trust quickly</h3>
-    <p>Users should be able to understand the product's value within the first few seconds. I used a clear hero message, strong contrast, and focused CTA placement to make the landing experience feel confident and easy to understand.</p>
+    <p>Users should be able to understand DigiGuard's value within the first few seconds. I used a clear hero message, strong contrast, and focused CTA placement to create a confident and easy-to-understand first impression.</p>
     <div class="annotated-block">
       <div class="ui-screen-card decision-phone">
-        <img src="suki_portfolio_assets/digiguard-design-decision-01.png" alt="DigiGuard landing page UI showing visual hierarchy">
-      </div>
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Clear headline</div></div>
-        <div class="wire-note"><span>B</span><div>Security-focused visual element</div></div>
-        <div class="wire-note"><span>C</span><div>Primary CTA</div></div>
-        <div class="wire-note"><span>D</span><div>Supporting trust message</div></div>
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-design-decision-01.png" alt="DigiGuard landing page UI showing visual hierarchy">
       </div>
     </div>
 
     <h3>Design Decision 2: Turn technical value into simple feature blocks</h3>
-    <p>Security products can become difficult to understand when information is too technical. I used feature cards, icons, and short descriptions to make the product benefits easier to scan.</p>
+    <p>Security products can become difficult to understand when information is too technical. I used feature cards, icons, and short descriptions to make product benefits easier to scan and understand.</p>
     <div class="annotated-block">
       <div class="ui-screen-card decision-phone">
-        <img src="suki_portfolio_assets/digiguard-design-decision-02.png" alt="DigiGuard feature card layout UI screen">
-      </div>
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Icon communicates feature category</div></div>
-        <div class="wire-note"><span>B</span><div>Short title supports quick scanning</div></div>
-        <div class="wire-note"><span>C</span><div>Description avoids technical overload</div></div>
-        <div class="wire-note"><span>D</span><div>Card layout keeps information grouped</div></div>
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-design-decision-02.png" alt="DigiGuard feature card layout UI screen">
       </div>
     </div>
 
-    <h3>Design Decision 3: Build trust through visual hierarchy</h3>
-    <p>Security products need to communicate status clearly and quickly. I designed the home dashboard to give users an immediate overview of their home safety, connected devices, and room status, so they can understand whether anything needs attention without navigating through multiple pages.</p>
+    <h3>Design Decision 3: Make system status easy to understand at a glance</h3>
+    <p>I prioritised home safety, connected devices, and room status on the dashboard so users can quickly understand what needs attention without navigating through multiple pages.</p>
     <div class="annotated-block">
       <div class="ui-screen-card decision-phone">
-        <img src="suki_portfolio_assets/digiguard-design-decision-03-hierarchy.png" alt="DigiGuard home dashboard UI showing status hierarchy">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-design-decision-03-hierarchy.png" alt="DigiGuard home dashboard UI showing status hierarchy">
       </div>
       <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Security status is placed at the top for immediate reassurance</div></div>
-        <div class="wire-note"><span>B</span><div>Colour-coded threat levels make risk easier to understand</div></div>
-        <div class="wire-note"><span>C</span><div>Quick access supports everyday device control</div></div>
-        <div class="wire-note"><span>D</span><div>Room-based grouping makes the system feel familiar</div></div>
+        <div class="wire-note full-note"><div><strong>Security status first</strong>Critical safety information is prioritised at the top of the dashboard.</div></div>
+        <div class="wire-note full-note"><div><strong>Room-based grouping</strong>Devices are organised around familiar physical spaces rather than technical categories.</div></div>
       </div>
     </div>
 
-    <h3>Design Decision 4: Create a clear device management system</h3>
-    <p>Smart home security products often involve multiple devices across different rooms, which can quickly become difficult to manage.</p>
+    <p>Room filters and status-based grouping extend the same hierarchy into device management, helping users find and control connected devices more efficiently.</p>
     <div class="annotated-block">
       <div class="ui-screen-card decision-phone">
-        <img src="suki_portfolio_assets/digiguard-design-decision-04-device-management.png" alt="DigiGuard device management UI screen">
-      </div>
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Room filters help users narrow down devices quickly</div></div>
-        <div class="wire-note"><span>B</span><div>Status tabs separate authorised and blocked devices</div></div>
-        <div class="wire-note"><span>C</span><div>Clear ON/OFF controls support quick action</div></div>
-        <div class="wire-note"><span>D</span><div>Room labels provide context for each device</div></div>
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-design-decision-04-device-management.png" alt="DigiGuard device management UI screen">
       </div>
     </div>
 
-    <h3>Design Decision 5: Create consistency through reusable UI components</h3>
-    <p>To keep the experience consistent across pages, I created reusable UI patterns such as buttons, cards, navigation elements, and section layouts.</p>
+    <h3>04 — Build consistency through reusable UI patterns</h3>
+    <p>I created reusable patterns for cards, navigation, status indicators, forms, and content sections to maintain consistency across the product and support future scalability.</p>
     <div class="placeholder-grid component-masonry">
       <div class="component-card">
-        <img src="suki_portfolio_assets/digiguard-component-security-status.png" alt="DigiGuard Security Status component">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-component-security-status.png" alt="DigiGuard Security Status component">
         <div>
           <h4>Security Status</h4>
-          <p>Monitor your home's safety at a glance with live status and health score.</p>
         </div>
       </div>
       <div class="component-card">
-        <img src="suki_portfolio_assets/digiguard-component-device-management.png" alt="DigiGuard Device Management component">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-component-device-management.png" alt="DigiGuard Device Management component">
         <div>
           <h4>Device Management</h4>
-          <p>Add, view, and manage all your smart devices from one secure and simple dashboard.</p>
         </div>
       </div>
       <div class="component-card">
-        <img src="suki_portfolio_assets/digiguard-component-instant-alerts.png" alt="DigiGuard Instant Alerts component">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-component-instant-alerts.png" alt="DigiGuard Instant Alerts component">
         <div>
           <h4>Instant Alerts</h4>
-          <p>Get real-time notifications for any unusual activity in your home.</p>
         </div>
       </div>
       <div class="component-card">
-        <img src="suki_portfolio_assets/digiguard-component-smart-control.png" alt="DigiGuard Smart Control component">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-component-smart-control.png" alt="DigiGuard Smart Control component">
         <div>
           <h4>Smart Control</h4>
-          <p>Control cameras, sensors, and automations with ease and confidence.</p>
         </div>
       </div>
       <div class="component-card">
-        <img src="suki_portfolio_assets/digiguard-component-form-fields.png" alt="DigiGuard form fields component">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-component-form-fields.png" alt="DigiGuard form fields component">
         <div>
           <h4>Secure Account Setup</h4>
-          <p>Create and manage your account with protected login details and clear user information.</p>
         </div>
       </div>
       <div class="component-card">
-        <img src="suki_portfolio_assets/digiguard-component-section-layouts.png" alt="DigiGuard section layouts component">
+        <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-component-section-layouts.png" alt="DigiGuard section layouts component">
         <div>
           <h4>Simple Navigation</h4>
-          <p>Access key areas of the app quickly, including home status, connected devices, alerts, and account settings.</p>
         </div>
       </div>
     </div>
@@ -1636,17 +1645,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="final-phone-row">
             <div class="final-phone">
               <div class="final-screen">
-                <img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-onboarding-02.png" alt="DigiGuard sign in UI screen">
+                <img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-onboarding-02.png" alt="DigiGuard sign in UI screen">
               </div>
             </div>
             <div class="final-phone">
               <div class="final-screen">
-                <img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-onboarding-01.png" alt="DigiGuard onboarding UI screen">
+                <img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-onboarding-01.png" alt="DigiGuard onboarding UI screen">
               </div>
             </div>
             <div class="final-phone">
               <div class="final-screen">
-                <img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-onboarding-03.png" alt="DigiGuard onboarding confirmation UI screen">
+                <img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-onboarding-03.png" alt="DigiGuard onboarding confirmation UI screen">
               </div>
             </div>
           </div>
@@ -1656,11 +1665,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div class="final-panel">
         <div class="final-panel-label">02 Dashboard & Monitoring</div>
         <div class="final-section-grid">
-          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-03.png" alt="DigiGuard device detail UI screen"></div></div>
-          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-new-02.png" alt="DigiGuard dashboard monitoring UI screen"></div></div>
-          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-01.png" alt="DigiGuard dashboard UI screen"></div></div>
-          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-02.png" alt="DigiGuard devices UI screen"></div></div>
-          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-05.png" alt="DigiGuard add device UI screen"></div></div>
+          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-dashboard-03.png" alt="DigiGuard device detail UI screen"></div></div>
+          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-dashboard-new-02.png" alt="DigiGuard dashboard monitoring UI screen"></div></div>
+          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-dashboard-01.png" alt="DigiGuard dashboard UI screen"></div></div>
+          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-dashboard-02.png" alt="DigiGuard devices UI screen"></div></div>
+          <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-dashboard-05.png" alt="DigiGuard add device UI screen"></div></div>
         </div>
       </div>
 
@@ -1668,10 +1677,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
         <div class="final-panel full-row">
           <div class="final-panel-label">03 Device Management</div>
           <div class="final-flow-row">
-            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-04.png" alt="DigiGuard notification UI screen"></div></div>
-            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-device-management-02.png" alt="DigiGuard room selection UI screen"></div></div>
-            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-device-management-01.png" alt="DigiGuard device management UI screen"></div></div>
-            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-device-management-03.png" alt="DigiGuard device setup UI screen"></div></div>
+            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-dashboard-04.png" alt="DigiGuard notification UI screen"></div></div>
+            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-device-management-02.png" alt="DigiGuard room selection UI screen"></div></div>
+            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-device-management-01.png" alt="DigiGuard device management UI screen"></div></div>
+            <div class="final-phone tall"><div class="final-screen"><img class="final-phone-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/digiguard-final-device-management-03.png" alt="DigiGuard device setup UI screen"></div></div>
           </div>
         </div>
       </div>
@@ -1682,18 +1691,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h2>Design Outcome</h2>
     <p>The project resulted in a clearer and more consistent digital identity for DigiGuard. The final design helped communicate the product as secure, modern, and approachable, while providing a UI direction that could scale across marketing pages and product touchpoints.</p>
     <ul class="detail-list">
-      <li>Established a trustworthy visual direction for a digital security product</li>
-      <li>Created a consistent UI system across key screens</li>
-      <li>Improved clarity of product communication through structured content blocks</li>
-      <li>Translated abstract security concepts into visual and interface patterns</li>
-      <li>Produced design assets suitable for presentation and handoff</li>
+      <li>Established a cohesive visual identity</li>
+      <li>Created a reusable UI system across key screens</li>
+      <li>Translated security concepts into clearer digital interactions</li>
     </ul>
   </div>
 
   <div class="detail-section">
     <h2>Reflection</h2>
-    <p>This project helped me understand how visual design can influence trust in digital products. For security-related products, users do not only evaluate the interface based on aesthetics; they also read visual cues such as hierarchy, contrast, consistency, and tone to decide whether the product feels credible.</p>
-    <p>I also learned the importance of designing a flexible visual system rather than isolated screens. By defining reusable colours, typography, components, and layout patterns, the design became easier to scale across different digital touchpoints.</p>
+    <p>This project reinforced that visual design is not just about aesthetics — it can directly shape how trustworthy and understandable a product feels. It also shifted my thinking from designing individual screens to building reusable patterns that create a more consistent and scalable product experience.</p>
   </div>
 </section>
 
@@ -1707,21 +1713,19 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   <div class="detail-hero">
     <div class="detail-tag">Hero / Project Intro</div>
     <h1 class="detail-title">EDI — A Research-led Inclusive Design Project</h1>
-    <p class="detail-subtitle">An inclusive design project exploring how digital experiences can better support diverse user needs, reduce access barriers, and create more respectful interactions.</p>
+    <p class="detail-subtitle">An inclusive design project exploring how digital experiences can reduce access barriers and better support people with diverse needs, backgrounds, and abilities.</p>
     <div class="case-tags">
       <span class="case-tag">Inclusive Design</span>
       <span class="case-tag">UX Research</span>
       <span class="case-tag">Accessibility</span>
       <span class="case-tag">Service Design</span>
-      <span class="case-tag">Social Impact</span>
-      <span class="case-tag">Research-led UX</span>
     </div>
   </div>
 
   <div class="detail-meta">
-    <div><div class="meta-label">PROJECT TYPE</div><div class="meta-val">Academic / UX Research / Inclusive Design</div></div>
+    <div><div class="meta-label">PROJECT TYPE</div><div class="meta-val">Academic · Inclusive Design</div></div>
     <div><div class="meta-label">ROLE</div><div class="meta-val">UX Designer / Researcher</div></div>
-    <div><div class="meta-label">PLATFORM</div><div class="meta-val">Digital experience / Service concept</div></div>
+    <div><div class="meta-label">PLATFORM</div><div class="meta-val">Website / Digital Experience</div></div>
     <div><div class="meta-label">TIMELINE</div><div class="meta-val">05.2024 - 07.2024</div></div>
     <div><div class="meta-label">TOOLS</div><div class="meta-val">Figma, Miro, Notion, Adobe Suite</div></div>
     <div><div class="meta-label">FOCUS</div><div class="meta-val">Access barriers, clarity, inclusive interaction</div></div>
@@ -1729,201 +1733,237 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   </div>
 
   <div class="detail-section">
-    <h2>Project Overview</h2>
-    <p>EDI is an inclusive design project focused on understanding how digital experiences can better support users with diverse needs, backgrounds, and access conditions. The project explored how design can reduce barriers, improve clarity, and create a more respectful and inclusive user experience.</p>
-    <p>My role involved researching user needs, identifying accessibility and inclusion barriers, translating insights into design principles, and developing design responses that support clearer and more equitable access.</p>
-    <img class="detail-image" src="suki_portfolio_assets/edi-project-overview.png" alt="EDI inclusive design project overview visual">
-  </div>
-
-  <div class="detail-section">
-    <h2>Design Context</h2>
-    <p>Digital products are often designed around an assumed "average user", but real users have different abilities, language backgrounds, confidence levels, cultural expectations, and access conditions. When these differences are not considered, the experience can become confusing, exclusionary, or difficult to use.</p>
-    <p>This project focused on designing with inclusion in mind, ensuring that the experience is not only functional, but also accessible, understandable, and respectful for a wider range of users.</p>
+    <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-project-overview.png" alt="EDI inclusive design project overview visual">
   </div>
 
   <div class="detail-section">
     <h2>Design Challenge</h2>
-    <h3>How might we design a digital experience that reduces access barriers and supports users with diverse needs in a clearer, more inclusive way?</h3>
+    <h3>How might we create a digital experience that remains clear, flexible and accessible for users with different needs, without making the interface feel complex?</h3>
     <div class="principle-grid">
-      <div class="principle-card center-card"><h4>01 / Reduce access barriers</h4><p>The experience should be easier to understand and use for people with different levels of confidence, ability, and digital familiarity.</p></div>
-      <div class="principle-card center-card"><h4>02 / Improve clarity</h4><p>Information should be structured in a way that is easy to scan, understand, and act on.</p></div>
-      <div class="principle-card center-card"><h4>03 / Support respectful representation</h4><p>The design should avoid assumptions and create a more inclusive experience for different user groups.</p></div>
+      <div class="principle-card center-card"><h4>Accessibility</h4><p>Support different ways of accessing and consuming information.</p></div>
+      <div class="principle-card center-card"><h4>Clarity</h4><p>Make important content easier to understand and navigate.</p></div>
+      <div class="principle-card center-card"><h4>Representation</h4><p>Create an experience that feels inclusive rather than designed around a single “default” user.</p></div>
     </div>
   </div>
 
   <div class="detail-section">
-    <h2>My Role</h2>
-    <p>As a UX Designer and Researcher, I focused on understanding user barriers and translating inclusive design principles into practical design decisions. My role involved research synthesis, problem framing, design principle development, concept exploration, and interface refinement.</p>
-    <h3>Key Responsibilities</h3>
-    <ul class="detail-list">
-      <li>Analysed user needs and access barriers</li>
-      <li>Synthesised research into key inclusion insights</li>
-      <li>Developed inclusive design principles</li>
-      <li>Explored design solutions that support clarity and accessibility</li>
-      <li>Created wireframes and interface concepts</li>
-      <li>Evaluated the design against accessibility and inclusion considerations</li>
-    </ul>
+    <h2>My Contribution</h2>
+    <p>I contributed across research synthesis, problem framing, inclusive design principles, and interaction design. My focus was translating research findings about user barriers into practical design decisions that improved clarity, accessibility, and inclusion.</p>
+    <div class="contribution-list">
+      <div class="contribution-item">
+        <h4>Research &amp; Synthesis</h4>
+        <p>Analysed user needs and access barriers, then synthesised findings into key inclusion insights.</p>
+      </div>
+      <div class="contribution-item">
+        <h4>Design Principles</h4>
+        <p>Translated research insights into inclusive design principles that guided the concept.</p>
+      </div>
+      <div class="contribution-item">
+        <h4>Interaction Design</h4>
+        <p>Explored solutions, wireframes, and interface concepts focused on clarity and accessibility.</p>
+      </div>
+      <div class="contribution-item">
+        <h4>Accessibility Review</h4>
+        <p>Evaluated design decisions against accessibility and inclusion considerations throughout the process.</p>
+      </div>
+    </div>
   </div>
 
   <div class="detail-section">
-    <h2>Research Focus</h2>
-    <h3>Understanding Barriers Before Designing Solutions</h3>
-    <p>Before moving into design, I focused on identifying what kinds of barriers users might experience when interacting with the service or digital interface. These barriers were not only functional, but also emotional, cognitive, social, and accessibility-related.</p>
+    <h2>Research Approach</h2>
+    <h3>Understanding where users experience friction</h3>
+    <p>The research explored where users may experience friction when accessing, understanding, and interacting with digital services. I looked across information clarity, accessibility, confidence, and representation to identify recurring barriers that could inform the design direction.</p>
+    <div class="research-methods">Methods: Interviews · Desk Research · Accessibility Review · Affinity Mapping</div>
     <div class="outcome-grid">
-      <div class="outcome-card"><h4>Information barriers</h4><p>Users may struggle when information is too complex, hidden, or written in unclear language.</p></div>
-      <div class="outcome-card"><h4>Accessibility barriers</h4><p>Users may experience difficulty due to low contrast, small text, unclear navigation, or limited interaction options.</p></div>
-      <div class="outcome-card"><h4>Confidence barriers</h4><p>Some users may hesitate when they are unsure what action to take or whether they are making the right choice.</p></div>
-      <div class="outcome-card"><h4>Representation barriers</h4><p>Users may feel excluded when the experience assumes one default background, ability, or behaviour pattern.</p></div>
+      <div class="outcome-card"><h4>Information &amp; clarity</h4><p>How users understand dense, unfamiliar, or poorly structured information.</p></div>
+      <div class="outcome-card"><h4>Accessibility</h4><p>How visual, navigational, and interaction choices can create barriers for different access needs.</p></div>
+      <div class="outcome-card"><h4>Confidence &amp; decision-making</h4><p>Where users may hesitate, feel uncertain, or need additional reassurance before taking action.</p></div>
+      <div class="outcome-card"><h4>Representation &amp; inclusion</h4><p>How language, assumptions, and representation can make an experience feel inclusive or exclusionary.</p></div>
     </div>
+    <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-research-approach.png" alt="EDI research approach visual">
+    <p class="image-caption">Research observations were grouped into recurring themes around clarity, accessibility, confidence, and representation.</p>
   </div>
 
   <div class="detail-section">
     <h2>Key Insights</h2>
-    <div class="insight-map">
+    <div class="insight-map three">
       <div class="insight-node">
         <div class="insight-index">INSIGHT 01</div>
-        <div><h4>Clarity is part of inclusion</h4><p>Inclusive design is not only about adding accessibility features. Clear language, visible structure, and predictable navigation can reduce cognitive load and help more users feel confident.</p></div>
+        <div><h4>Clarity is part of inclusion</h4><p>Users benefit from clear language, visible structure, and predictable navigation. Reducing unnecessary complexity can make information easier to understand and help users feel more confident.</p></div>
       </div>
       <div class="insight-node">
         <div class="insight-index">INSIGHT 02</div>
-        <div><h4>Users need flexibility, not a one-size-fits-all path</h4><p>Different users may need different levels of guidance, information detail, or interaction support. The experience should allow users to move through the journey in a way that suits their needs.</p></div>
+        <div><h4>Different users need different levels of support</h4><p>Different users need different levels of guidance, information detail, and interaction support depending on their confidence, abilities, and context.</p></div>
       </div>
       <div class="insight-node">
         <div class="insight-index">INSIGHT 03</div>
-        <div><h4>Representation affects trust</h4><p>The tone, imagery, labels, and content structure can influence whether users feel recognised, respected, and included.</p></div>
-      </div>
-      <div class="insight-node">
-        <div class="insight-index">INSIGHT 04</div>
-        <div><h4>Accessibility should be embedded, not added at the end</h4><p>Accessibility considerations such as contrast, readable text, clear hierarchy, and simple interactions should shape the design from the beginning.</p></div>
+        <div><h4>Representation shapes trust</h4><p>Language, imagery, and labels influence whether users feel recognised, respected, and included in the experience.</p></div>
       </div>
     </div>
   </div>
 
   <div class="detail-section">
     <h2>Inclusive Design Principles</h2>
-    <div class="principle-system">
+    <p>These research insights were translated into three principles that guided the design direction.</p>
+    <div class="principle-system three">
       <div class="principle-tile">
-        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h11"/><path d="M4 18h7"/><path d="m17 15 2 2 3-4"/></svg></div><div class="principle-num">PRINCIPLE 01</div><h4>Clear</h4></div>
-        <p>Use plain language, visible structure, and clear calls to action to reduce confusion.</p>
+        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h11"/><path d="M4 18h7"/><path d="m17 15 2 2 3-4"/></svg></div><div class="principle-num">PRINCIPLE 01</div><h4>Clear &amp; Accessible</h4></div>
+        <p>Use clear language, readable content, predictable navigation, and accessible visual hierarchy to reduce unnecessary barriers.</p>
       </div>
       <div class="principle-tile">
-        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10v10H7z"/><path d="M3 12h4"/><path d="M17 12h4"/><path d="M12 3v4"/><path d="M12 17v4"/></svg></div><div class="principle-num">PRINCIPLE 02</div><h4>Flexible</h4></div>
-        <p>Support different user behaviours, confidence levels, and access needs.</p>
+        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10v10H7z"/><path d="M3 12h4"/><path d="M17 12h4"/><path d="M12 3v4"/><path d="M12 17v4"/></svg></div><div class="principle-num">PRINCIPLE 02</div><h4>Flexible &amp; Supportive</h4></div>
+        <p>Provide different levels of guidance and support so users can interact with the experience according to their needs and confidence.</p>
       </div>
       <div class="principle-tile">
-        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M4 19c.6-3.6 2.5-5.4 5-5.4s4.4 1.8 5 5.4"/><path d="M14.5 14.2c2.4.3 4 1.9 4.5 4.8"/></svg></div><div class="principle-num">PRINCIPLE 03</div><h4>Respectful</h4></div>
-        <p>Avoid assumptions and use inclusive language and representation.</p>
-      </div>
-      <div class="principle-tile">
-        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M5 10h14"/><path d="M12 10v10"/><path d="m8 20 4-10 4 10"/></svg></div><div class="principle-num">PRINCIPLE 04</div><h4>Accessible</h4></div>
-        <p>Prioritise readable typography, sufficient contrast, simple navigation, and screen-friendly layouts.</p>
-      </div>
-      <div class="principle-tile">
-        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/><path d="M9 12h6"/><path d="M12 9v6"/></svg></div><div class="principle-num">PRINCIPLE 05</div><h4>Supportive</h4></div>
-        <p>Provide guidance at moments where users may hesitate or need reassurance.</p>
+        <div><div class="principle-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M4 19c.6-3.6 2.5-5.4 5-5.4s4.4 1.8 5 5.4"/><path d="M14.5 14.2c2.4.3 4 1.9 4.5 4.8"/></svg></div><div class="principle-num">PRINCIPLE 03</div><h4>Respectful &amp; Inclusive</h4></div>
+        <p>Avoid assumptions about users and use inclusive language, imagery, and representation to help more people feel recognised and respected.</p>
       </div>
     </div>
   </div>
 
   <div class="detail-section">
     <h2>Design Response</h2>
-    <p>Based on the research insights, I developed a design response that focuses on clarity, accessibility, and supportive guidance. The goal was to make the experience easier to understand and more inclusive for users with different levels of familiarity, confidence, and access needs.</p>
+    <p>I translated the three design principles into practical interface responses across information structure, user guidance, and inclusive content.</p>
 
-    <h3>Solution 1: Clearer Information Hierarchy</h3>
-    <p>I reorganised the information structure so that users can quickly understand what the page is about, what information matters most, and what action they can take next.</p>
-    <div class="annotated-block">
-      <img class="detail-image" src="suki_portfolio_assets/edi-solution-1-information-hierarchy.png" alt="EDI clearer information hierarchy design response">
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Primary information appears first</div></div>
-        <div class="wire-note"><span>B</span><div>Related content is grouped together</div></div>
-        <div class="wire-note"><span>C</span><div>Key actions are visually separated</div></div>
-        <div class="wire-note"><span>D</span><div>Supporting information is placed after the main task</div></div>
+    <h3>01 — Clear &amp; Accessible Information</h3>
+    <p>I simplified the information hierarchy and strengthened readability so users can identify what matters, understand relationships between content, and find the next action more easily.</p>
+    <div class="response-layout image-narrow">
+      <div class="response-images">
+        <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-solution-1-information-hierarchy.png" alt="EDI clearer information hierarchy design response">
+        <img class="detail-image narrow-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-solution-2-accessible-visual-design.png" alt="EDI accessible visual design response">
+      </div>
+      <div class="response-notes">
+        <div class="response-note"><h4>Clear hierarchy</h4><p>Primary content and actions are prioritised through stronger visual structure.</p></div>
+        <div class="response-note"><h4>Readable presentation</h4><p>Spacing, typography, and contrast make dense content easier to scan.</p></div>
+        <div class="response-note"><h4>Predictable actions</h4><p>Consistent button states and content grouping make next steps easier to identify.</p></div>
       </div>
     </div>
 
-    <h3>Solution 2: More Accessible Visual Design</h3>
-    <p>I refined the visual design to improve readability and reduce visual strain. This included stronger hierarchy, more readable spacing, clearer button states, and more accessible colour contrast.</p>
+    <h3>02 — Flexible &amp; Supportive Guidance</h3>
+    <p>I introduced contextual guidance at moments of uncertainty, giving users clearer explanations, feedback, and next steps without forcing everyone through the same level of support.</p>
     <div class="annotated-block">
-      <img class="detail-image narrow-image" src="suki_portfolio_assets/edi-solution-2-accessible-visual-design.png" alt="EDI accessible visual design response">
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Larger text improves readability</div></div>
-        <div class="wire-note"><span>B</span><div>Clear contrast supports visual accessibility</div></div>
-        <div class="wire-note"><span>C</span><div>Buttons use clear active and inactive states</div></div>
-        <div class="wire-note"><span>D</span><div>Spacing helps reduce cognitive load</div></div>
+      <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-solution-3-supportive-guidance.png" alt="EDI supportive guidance design response">
+      <div class="response-notes">
+        <div class="response-note"><h4>Contextual guidance</h4><p>Helper text and explanations appear when additional support is useful.</p></div>
+        <div class="response-note"><h4>Recovery support</h4><p>Error states explain what happened and how users can continue.</p></div>
+        <div class="response-note"><h4>Progress &amp; reassurance</h4><p>Progress and confirmation states help users understand where they are and what happens next.</p></div>
       </div>
     </div>
 
-    <h3>Solution 3: Supportive Guidance</h3>
-    <p>To reduce uncertainty, I introduced guidance at key moments in the experience. Instead of assuming users know what to do, the design provides short explanations, helper text, and clearer next steps.</p>
-    <div class="annotated-block">
-      <img class="detail-image" src="suki_portfolio_assets/edi-solution-3-supportive-guidance.png" alt="EDI supportive guidance design response">
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Helper text explains why information is needed</div></div>
-        <div class="wire-note"><span>B</span><div>Error messages guide users toward recovery</div></div>
-        <div class="wire-note"><span>C</span><div>Progress indicators show where users are in the journey</div></div>
-        <div class="wire-note"><span>D</span><div>Confirmation states provide reassurance</div></div>
+    <h3>03 — Respectful &amp; Inclusive Content</h3>
+    <p>I reviewed language, feedback, and representation to remove unnecessary assumptions and create a more respectful and inclusive experience.</p>
+    <div class="inclusive-content-board" aria-label="Respectful and inclusive content before and after examples">
+      <div class="inclusive-content-head" aria-hidden="true">
+        <span></span>
+        <span class="before-label">Before</span>
+        <span></span>
+        <span class="after-label">After</span>
+        <span class="rationale-label">Design Rationale</span>
       </div>
+      <div class="inclusive-content-row">
+        <div class="inclusive-topic">
+          <div class="inclusive-topic-num">01</div>
+          <h4>More supportive feedback</h4>
+          <p>Give helpful guidance instead of blaming users.</p>
+        </div>
+        <div>
+          <div class="inclusive-example">
+            <div class="inclusive-example-label">Form error message</div>
+            <div class="inclusive-message before">Invalid input</div>
+          </div>
+          <p class="inclusive-caption before">Blunt and unhelpful</p>
+        </div>
+        <div class="inclusive-arrow">→</div>
+        <div>
+          <div class="inclusive-example">
+            <div class="inclusive-example-label">Form error message</div>
+            <div class="inclusive-message after">Please check this field and try again.</div>
+          </div>
+          <p class="inclusive-caption after">Clear guidance and next step</p>
+        </div>
+        <div class="inclusive-rationale">
+          <div><h4>From blame to guidance</h4><p>Feedback explains what users can do next instead of simply labelling their input as wrong.</p></div>
+        </div>
+      </div>
+      <div class="inclusive-content-row">
+        <div class="inclusive-topic">
+          <div class="inclusive-topic-num">02</div>
+          <h4>Reduce assumed knowledge</h4>
+          <p>Provide context for users who may be less familiar.</p>
+        </div>
+        <div>
+          <div class="inclusive-example">
+            <div class="inclusive-example-label">Form label</div>
+            <div class="inclusive-input">Enter your course code</div>
+          </div>
+          <p class="inclusive-caption before">Assumes users know what this is</p>
+        </div>
+        <div class="inclusive-arrow">→</div>
+        <div>
+          <div class="inclusive-example">
+            <div class="inclusive-example-label">Form label</div>
+            <div class="inclusive-input">Enter your course code</div>
+            <p class="inclusive-caption">You can find this in your course details.</p>
+          </div>
+          <p class="inclusive-caption after">Provides context and support</p>
+        </div>
+        <div class="inclusive-rationale">
+          <div><h4>From assumption to support</h4><p>Additional context helps users who may be less familiar with the system.</p></div>
+        </div>
+      </div>
+      <div class="inclusive-content-row">
+        <div class="inclusive-topic">
+          <div class="inclusive-topic-num">03</div>
+          <h4>Offer choice and flexibility</h4>
+          <p>Use language that supports choice and flexibility.</p>
+        </div>
+        <div>
+          <div class="inclusive-example">
+            <div class="inclusive-example-label">Section heading</div>
+            <div class="inclusive-heading-box">Choose your preferred learning method</div>
+          </div>
+          <p class="inclusive-caption before">Feels fixed and one-size-fits-all</p>
+        </div>
+        <div class="inclusive-arrow">→</div>
+        <div>
+          <div class="inclusive-example">
+            <div class="inclusive-example-label">Section heading</div>
+            <div class="inclusive-heading-box">How would you like to explore this content?</div>
+            <p class="inclusive-caption">You can change this later.</p>
+          </div>
+          <p class="inclusive-caption after">Empowers users with choice</p>
+        </div>
+        <div class="inclusive-rationale">
+          <div><h4>From fixed to flexible</h4><p>The language avoids implying that users must have one permanent way of learning.</p></div>
+        </div>
+      </div>
+      <div class="inclusive-why"><strong>Why this matters:</strong> Small changes in language can reduce frustration, build trust, and help more users feel respected and included.</div>
     </div>
-
-    <h3>Solution 4: Inclusive Language and Representation</h3>
-    <p>I reviewed the tone and content to avoid unnecessary assumptions and make the experience feel more respectful and welcoming.</p>
-    <table class="decision-table">
-      <thead><tr><th>Before</th><th>After</th></tr></thead>
-      <tbody>
-        <tr><td>"Invalid input"</td><td>"Please check this field and try again."</td></tr>
-        <tr><td>"You must complete this"</td><td>"Complete this step to continue."</td></tr>
-        <tr><td>"Normal user"</td><td>"User" / specific user group name</td></tr>
-      </tbody>
-    </table>
   </div>
 
   <div class="detail-section decision-section">
     <h2>Key Design Decisions</h2>
-    <h3>Design Decision 1: Make key information easier to scan</h3>
-    <p>Users should not need to read every detail to understand what to do next. I used clearer headings, grouped content, and visible CTAs to make the experience easier to navigate.</p>
+    <h3>01 — Make content easier to scan</h3>
     <div class="annotated-block">
-      <img class="detail-image decision-image-40" src="suki_portfolio_assets/edi-decision-1-scan-information.png" alt="EDI design decision showing scannable key information">
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Clear page title sets context</div></div>
-        <div class="wire-note"><span>B</span><div>Grouped sections reduce information overload</div></div>
-        <div class="wire-note"><span>C</span><div>Primary action is visually prominent</div></div>
-        <div class="wire-note"><span>D</span><div>Supporting information is kept secondary</div></div>
+      <img class="detail-image decision-image-40" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-decision-1-scan-information.png" alt="EDI design decision showing scannable key information">
+      <div class="response-notes">
+        <div class="response-note"><p>Research highlighted that dense information could quickly become difficult to process. I introduced shorter content blocks, stronger hierarchy and clearer grouping to reduce cognitive load.</p></div>
       </div>
     </div>
 
-    <h3>Design Decision 2: Design for different confidence levels</h3>
-    <p>Not all users approach the experience with the same level of confidence or digital familiarity. I used helper text, confirmation states, and step-by-step guidance to support users who may need extra reassurance.</p>
+    <h3>02 — Give users more control</h3>
     <div class="annotated-block">
-      <img class="detail-image decision-image-40" src="suki_portfolio_assets/edi-decision-2-confidence-levels.png" alt="EDI design decision showing support for different confidence levels">
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Helper text reduces uncertainty</div></div>
-        <div class="wire-note"><span>B</span><div>Progress indication supports orientation</div></div>
-        <div class="wire-note"><span>C</span><div>Confirmation message reassures users</div></div>
-        <div class="wire-note"><span>D</span><div>Back / edit options give users control</div></div>
+      <img class="detail-image decision-image-40" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-decision-2-confidence-levels.png" alt="EDI design decision showing support for different confidence levels">
+      <div class="response-notes">
+        <div class="response-note"><p>Rather than assuming one preferred way of accessing information, the experience provides flexible ways to navigate and engage with content.</p></div>
       </div>
     </div>
 
-    <h3>Design Decision 3: Use accessibility as a design foundation</h3>
-    <p>Accessibility was considered as part of the core interface design, not as a final adjustment. I focused on readable text, sufficient spacing, clear controls, and predictable interaction patterns.</p>
+    <h3>03 — Design inclusion into the core experience</h3>
     <div class="annotated-block">
-      <img class="detail-image decision-image-40" src="suki_portfolio_assets/edi-decision-3-accessibility-foundation.png" alt="EDI design decision showing accessibility as a design foundation">
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Readable typography supports accessibility</div></div>
-        <div class="wire-note"><span>B</span><div>Clear visual contrast improves legibility</div></div>
-        <div class="wire-note"><span>C</span><div>Large touch targets support mobile usability</div></div>
-        <div class="wire-note"><span>D</span><div>Predictable navigation reduces cognitive load</div></div>
-      </div>
-    </div>
-
-    <h3>Design Decision 4: Use inclusive language to reduce exclusion</h3>
-    <p>Microcopy can shape how users feel in an experience. I refined language to be clearer, more respectful, and less judgmental.</p>
-    <div class="annotated-block">
-      <img class="detail-image decision-image-40" src="suki_portfolio_assets/edi-decision-4-inclusive-language.png" alt="EDI design decision showing inclusive language and microcopy">
-      <div class="wire-notes">
-        <div class="wire-note"><span>A</span><div>Plain language reduces confusion</div></div>
-        <div class="wire-note"><span>B</span><div>Supportive tone avoids blame</div></div>
-        <div class="wire-note"><span>C</span><div>Labels avoid unnecessary assumptions</div></div>
-        <div class="wire-note"><span>D</span><div>Error states explain how to recover</div></div>
+      <img class="detail-image decision-image-40" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-decision-3-accessibility-foundation.png" alt="EDI design decision showing accessibility as a design foundation">
+      <div class="response-notes">
+        <div class="response-note"><p>Accessibility was treated as part of the core interaction model rather than an additional setting added at the end.</p></div>
       </div>
     </div>
   </div>
@@ -1931,7 +1971,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   <div class="detail-section">
     <h2>Final Design</h2>
     <p>The final design focuses on clarity, accessibility, and supportive guidance. It aims to help users understand information more easily, complete tasks with confidence, and feel respected throughout the experience.</p>
-    <img class="detail-image" src="suki_portfolio_assets/edi-final-design.png" alt="EDI final design screen overview">
+    <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/edi-final-design.png" alt="EDI final design screen overview">
   </div>
 
   <div class="detail-section">
@@ -1949,9 +1989,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="detail-section">
     <h2>Reflection</h2>
-    <p>This project helped me understand that inclusive design is not a separate layer added at the end of a product. It needs to shape the way information is structured, how language is written, how users are guided, and how different needs are considered throughout the experience.</p>
-    <p>I also learned that designing inclusively requires questioning assumptions. A design that feels simple for one user may still create barriers for someone with different abilities, confidence levels, language backgrounds, or access conditions.</p>
-    <p>This project strengthened my ability to translate research insights into practical design decisions and evaluate interface choices through an accessibility and inclusion lens.</p>
+    <p>This project changed how I think about accessibility: rather than treating it as a final compliance check, I learned to use it as an input throughout the design process. Research also reinforced the importance of validating assumptions with users instead of designing around a single “default” experience.</p>
   </div>
 </section>
 
@@ -1990,7 +2028,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h2>Project Overview</h2>
     <p>ReSoil is a sustainability app concept developed during a 24-hour designathon. The project encourages users to reuse daily kitchen waste to cultivate organic soil, turning a small household action into a visible and rewarding habit.</p>
     <p>My role focused on product concept development, user journey design, behaviour change strategy, UI design, and pitch storytelling. Our team developed the concept, prototype, and final presentation within 24 hours and achieved second place in the competition.</p>
-    <img class="detail-image" src="suki_portfolio_assets/resoil-project-overview.png" alt="ReSoil sustainability app project overview visual">
+    <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/resoil-project-overview.png" alt="ReSoil sustainability app project overview visual">
   </div>
 
   <div class="detail-section">
@@ -2073,7 +2111,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   <div class="detail-section">
     <h2>User Journey</h2>
     <div class="journey-image-wrap" aria-label="ReSoil user journey with interactive hover regions">
-      <img src="suki_portfolio_assets/resoil-user-journey.png" alt="ReSoil user journey from awareness to repeat habit">
+      <img src="/Users/liushuqi/Downloads/suki_portfolio_assets/resoil-user-journey.png" alt="ReSoil user journey from awareness to repeat habit">
       <div class="journey-hotspot" title="1. Awareness"></div>
       <div class="journey-hotspot" title="2. Setup"></div>
       <div class="journey-hotspot" title="3. Daily Action"></div>
@@ -2098,22 +2136,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h2>Key Design Decisions</h2>
     <h3>Design Decision 1: Make sustainable action feel small and achievable</h3>
     <p>Users may feel sustainability is difficult when it requires major changes. I designed the experience around small daily actions, making kitchen waste reuse feel manageable and easy to repeat.</p>
-    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="suki_portfolio_assets/resoil-decision-1-small-action.png" alt="ReSoil design decision showing small sustainable action flow"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Daily task is clear and lightweight</div></div><div class="wire-note"><span>B</span><div>Simple input reduces effort</div></div><div class="wire-note"><span>C</span><div>Tips help users know what to do</div></div><div class="wire-note"><span>D</span><div>Completion feedback reinforces the action</div></div></div></div>
+    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/resoil-decision-1-small-action.png" alt="ReSoil design decision showing small sustainable action flow"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Daily task is clear and lightweight</div></div><div class="wire-note"><span>B</span><div>Simple input reduces effort</div></div><div class="wire-note"><span>C</span><div>Tips help users know what to do</div></div><div class="wire-note"><span>D</span><div>Completion feedback reinforces the action</div></div></div></div>
     <h3>Design Decision 2: Visualise progress to maintain motivation</h3>
     <p>Sustainability impact can feel invisible. ReSoil makes progress visible through soil growth, habit streaks, and contribution summaries, helping users understand the value of their repeated actions.</p>
-    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="suki_portfolio_assets/resoil-decision-2-progress-motivation.png" alt="ReSoil design decision showing visible progress and motivation"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Soil progress shows visible transformation</div></div><div class="wire-note"><span>B</span><div>Streaks encourage consistency</div></div><div class="wire-note"><span>C</span><div>Impact summary connects action to outcome</div></div><div class="wire-note"><span>D</span><div>Milestones reward continued participation</div></div></div></div>
+    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/resoil-decision-2-progress-motivation.png" alt="ReSoil design decision showing visible progress and motivation"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Soil progress shows visible transformation</div></div><div class="wire-note"><span>B</span><div>Streaks encourage consistency</div></div><div class="wire-note"><span>C</span><div>Impact summary connects action to outcome</div></div><div class="wire-note"><span>D</span><div>Milestones reward continued participation</div></div></div></div>
     <h3>Design Decision 3: Use positive reinforcement instead of guilt</h3>
     <p>Rather than relying on negative messaging about waste, the app uses encouraging feedback, rewards, and growth-oriented visuals to make sustainable behaviour feel satisfying.</p>
-    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="suki_portfolio_assets/resoil-decision-3-positive-reinforcement.png" alt="ReSoil design decision showing positive reinforcement and rewards"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Encouraging tone supports motivation</div></div><div class="wire-note"><span>B</span><div>Rewards celebrate small achievements</div></div><div class="wire-note"><span>C</span><div>Growth visuals make the outcome feel tangible</div></div><div class="wire-note"><span>D</span><div>Friendly UI reduces pressure</div></div></div></div>
+    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/resoil-decision-3-positive-reinforcement.png" alt="ReSoil design decision showing positive reinforcement and rewards"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Encouraging tone supports motivation</div></div><div class="wire-note"><span>B</span><div>Rewards celebrate small achievements</div></div><div class="wire-note"><span>C</span><div>Growth visuals make the outcome feel tangible</div></div><div class="wire-note"><span>D</span><div>Friendly UI reduces pressure</div></div></div></div>
     <h3>Design Decision 4: Connect digital tracking with real-world action</h3>
     <p>The app is designed to support a physical household habit. Digital reminders and progress tracking are connected to the real-world process of collecting kitchen waste and cultivating soil.</p>
-    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="suki_portfolio_assets/resoil-decision-4-real-world-action.png" alt="ReSoil design decision connecting digital tracking with real-world action"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Reminder prompts real-world action</div></div><div class="wire-note"><span>B</span><div>Logging connects behaviour to progress</div></div><div class="wire-note"><span>C</span><div>Soil status reflects physical activity</div></div><div class="wire-note"><span>D</span><div>Planting outcome completes the loop</div></div></div></div>
+    <div class="annotated-block"><img class="detail-image resoil-decision-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/resoil-decision-4-real-world-action.png" alt="ReSoil design decision connecting digital tracking with real-world action"><div class="wire-notes"><div class="wire-note"><span>A</span><div>Reminder prompts real-world action</div></div><div class="wire-note"><span>B</span><div>Logging connects behaviour to progress</div></div><div class="wire-note"><span>C</span><div>Soil status reflects physical activity</div></div><div class="wire-note"><span>D</span><div>Planting outcome completes the loop</div></div></div></div>
   </div>
 
   <div class="detail-section">
     <h2>Final Design</h2>
     <p>The final prototype presents ReSoil as a friendly and motivating sustainability companion, helping users understand what to reuse, track their progress, and build a more sustainable household routine.</p>
-    <img class="detail-image" src="suki_portfolio_assets/resoil-final-design.png" alt="ReSoil final design prototype overview">
+    <img class="detail-image" src="/Users/liushuqi/Downloads/suki_portfolio_assets/resoil-final-design.png" alt="ReSoil final design prototype overview">
   </div>
 
   <div class="detail-section">
@@ -2156,8 +2194,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h2 class="sec-title">About</h2>
   </div>
   <div class="about-photo-placeholder" aria-label="Suki profile image with interactive reveal">
-    <img class="about-photo-real" src="suki_portfolio_assets/about-real-photo.png" alt="Suki portrait photo">
-    <img class="about-photo-watercolor" src="suki_portfolio_assets/about-watercolor.png" alt="Watercolor portrait of Suki">
+    <img class="about-photo-real" src="/Users/liushuqi/Downloads/suki_portfolio_assets/about-real-photo.png" alt="Suki portrait photo">
+    <img class="about-photo-watercolor" src="/Users/liushuqi/Downloads/suki_portfolio_assets/about-watercolor.png" alt="Watercolor portrait of Suki">
   </div>
   <div class="about-grid">
     <div class="about-left">
