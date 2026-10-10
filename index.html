@@ -1,4 +1,9 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shuqi Liu | Product &amp; UX Designer</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
@@ -113,7 +118,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .decision-section p + h3{margin-top:5rem}
 .detail-list{list-style:none;font-size:13px;color:#4a4845;line-height:1.6;margin:1rem 0 0;max-width:none}
 .detail-list li{display:flex;gap:0.6rem;padding:0.25rem 0;transition:color 0.18s,transform 0.18s}
-.detail-list li::before{content:'→';font-family:'DM Mono',monospace;color:#3d35c8;flex-shrink:0;transition:transform 0.18s,color 0.18s}
+.detail-list li::before{content:'\2192';font-family:'DM Mono',monospace;color:#3d35c8;flex-shrink:0;transition:transform 0.18s,color 0.18s}
 .detail-list li:hover{color:#0f0e0c;transform:translateX(4px)}
 .detail-list li:hover::before{transform:translateX(3px);color:#6b5ce7}
 .section-kicker{font-family:'DM Mono',monospace;font-size:11px;color:#8a8784;letter-spacing:0.1em;margin-bottom:0.75rem}
@@ -555,7 +560,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .flow-branch-copy{font-size:12px;color:#4a4845;line-height:1.35}
 .flow-return{font-family:'DM Mono',monospace;font-size:10px;color:#8a8784;letter-spacing:0.04em}
 .flow-return-link{margin-top:0.4rem;padding-top:0.45rem;border-top:1px dashed rgba(210,118,92,0.5);font-family:'DM Mono',monospace;font-size:10px;color:#9d5c44;letter-spacing:0.03em;line-height:1.35}
-.flow-return-link::before{content:'↩ ';font-size:12px}
+.flow-return-link::before{content:'\21A9  ';font-size:12px}
 .phone-screen{min-height:520px;border-radius:20px;background:#fafaf8;padding:1rem;display:flex;flex-direction:column;gap:0.85rem;color:#0f0e0c}
 .phone-top{font-family:'DM Mono',monospace;font-size:10px;color:#3d35c8;display:flex;justify-content:space-between}
 .camera-area{flex:1;border:1px dashed #8a8784;background:#f2f1ee;display:flex;align-items:center;justify-content:center;text-align:center;color:#8a8784;font-family:'DM Mono',monospace;font-size:11px;line-height:1.6;padding:1rem}
@@ -595,9 +600,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .scope-col.v2-col .scope-tag{border-color:#d5d2cc;background:#f2f1ee;color:#8a8784}
 .scope-col ul{list-style:none;font-size:13px;color:#4a4845}
 .scope-col ul li{padding:0.3rem 0;display:flex;gap:0.5rem;line-height:1.4}
-.scope-col ul li::before{content:'→';color:#3d35c8;flex-shrink:0}
+.scope-col ul li::before{content:'\2192';color:#3d35c8;flex-shrink:0}
 .scope-col.v2-col h3{color:#8a8784}
-.v2-col ul li::before{content:'○';color:#8a8784}
+.v2-col ul li::before{content:'\25CB';color:#8a8784}
 .outcome-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem}
 .outcome-card{padding:1.25rem;border:1px solid #e2e0da;transition:border-color 0.2s,transform 0.2s,background 0.2s}
 .outcome-card:hover{border-color:#3d35c8;transform:translateY(-4px);background:#fafaf8}
@@ -605,13 +610,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .outcome-card p{font-size:13px;color:#4a4845;line-height:1.5}
 
 /* ABOUT + CONTACT */
-#about{display:block;padding:5rem 0 6rem;border-top:1px solid #e2e0da;max-width:980px;margin:0 2.5rem 0 calc(2.5rem + 10vw);text-align:left}
+#about{display:block;padding:5rem 2.5rem 6rem;border-top:1px solid #e2e0da;max-width:none;margin:0;text-align:left}
 #about .back-btn{display:none}
-.about-photo-placeholder{position:relative;width:180px;height:180px;border-radius:50%;border:1px solid rgba(61,53,200,0.28);margin:0.5rem 0 2rem;overflow:hidden;background:#fff;box-shadow:0 14px 30px rgba(61,53,200,0.08);--mx:50%;--my:50%;--reveal:0px;transition:transform 0.24s,border-color 0.24s,box-shadow 0.24s}
-.about-photo-placeholder:hover{border-color:#3d35c8;box-shadow:0 20px 42px rgba(61,53,200,0.14);--reveal:54px}
-.about-photo-placeholder img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.about-photo-real{z-index:1;transform:scale(1.08);object-position:50% 30%}
-.about-photo-watercolor{z-index:2;pointer-events:none;transform:translateY(31px) scale(1.35);-webkit-mask:radial-gradient(circle var(--reveal) at var(--mx) var(--my),transparent 0 var(--reveal),#000 calc(var(--reveal) + 1px));mask:radial-gradient(circle var(--reveal) at var(--mx) var(--my),transparent 0 var(--reveal),#000 calc(var(--reveal) + 1px))}
+#about .about-inner{width:100%;max-width:1440px;margin-inline:auto}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
 .about-left,.about-right{display:flex;flex-direction:column;align-items:flex-start}
 .about-text{font-size:14px;color:#4a4845;line-height:1.8;margin-bottom:1.5rem;font-weight:300;text-align:left;transition:color 0.18s,transform 0.18s}
@@ -736,11 +737,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   .decision-table{display:block;overflow-x:auto;white-space:normal}
 }
 </style>
+<link rel="stylesheet" href="home-hero.css">
+<link rel="stylesheet" href="home-experience.css">
+</head>
+<body>
 
 <div class="cur" id="cur"></div>
 
-<nav>
-  <div class="nav-logo" onclick="showMain('hero')">SL.PORTFOLIO</div>
+<nav class="site-nav">
+  <div class="nav-logo" onclick="showMain('hero')">SHUQI LIU</div>
   <div class="nav-links">
     <button class="nav-link" onclick="showMain('hero')">HOME</button>
     <button class="nav-link" onclick="showMain('about')">ABOUT</button>
@@ -751,32 +756,63 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 </nav>
 
 <div class="home-story">
-  <div class="story-orb-sticky">
-    <div class="story-orb-stage">
-      <div class="story-orb-slot">
-        <div class="orb-wrap">
-          <canvas id="heroOrb" aria-label="Transparent morphing sphere visual"></canvas>
+  <section id="hero" class="hero-immersive hero-editorial">
+    <div class="hero-shell">
+      <div class="hero-topline hero-reveal">
+        <span>Product &amp; UX Designer</span>
+        <span>Sydney, Australia</span>
+        <span>Design Computing / Computer Science</span>
+      </div>
+
+      <div class="hero-composition">
+        <div class="hero-main">
+          <p class="hero-kicker hero-reveal">Digital product design across B2B SaaS, mobile and web.</p>
+          <div class="hero-name-group hero-reveal">
+            <h1 class="hero-title"><span>Shuqi</span><span>Liu</span></h1>
+            <p class="hero-sub">I design digital products that make complex workflows feel clearer, calmer and easier to use.</p>
+          </div>
+        </div>
+
+        <figure class="hero-portrait hero-reveal">
+          <img src="suki_portfolio_assets/about-real-photo.png" alt="Portrait of Shuqi Liu">
+          <figcaption>Product thinking, interface craft and technical fluency.</figcaption>
+        </figure>
+      </div>
+
+      <div class="hero-footer">
+        <div class="hero-scroll hero-reveal" aria-hidden="true">
+          <span>SCROLL TO EXPLORE</span>
+          <i></i>
+        </div>
+        <div class="hero-actions hero-reveal" aria-label="Primary actions">
+          <button class="cta hero-primary" onclick="showMain('projects')">
+            Selected Work <span class="arr" aria-hidden="true">&darr;</span>
+          </button>
+          <button class="cta hero-secondary" onclick="showDetail('contact')">
+            Contact <span class="arr" aria-hidden="true">&rarr;</span>
+          </button>
         </div>
       </div>
     </div>
-  </div>
-
-  <section id="hero">
-    <div class="hero-left">
-      <div class="hero-eyebrow">Product & UX Designer</div>
-      <h1 class="hero-title">Shuqi Liu</h1>
-      <p class="hero-sub">Designing clearer, more reliable digital workflows — across B2B SaaS, mobile, and web. Based in Sydney.</p>
-      <button class="cta" onclick="showMain('projects')">
-        VIEW WORK <span class="arr">↓</span>
-      </button>
-    </div>
-    <div class="hero-right"></div>
   </section>
 
   <section id="projects">
     <div class="sec-header">
       <span class="sec-num">SELECTED WORK</span>
       <h2 class="sec-title">Projects</h2>
+    </div>
+    <div class="work-story" aria-label="Scroll-driven selected work presentation">
+      <div class="work-stage">
+        <div class="work-copy">
+          <div class="work-count" id="workCount">01 / 01</div>
+          <h2 class="work-title" id="workTitle">Selected Work</h2>
+          <p class="work-desc" id="workDesc"></p>
+          <div class="work-tags" id="workTags"></div>
+          <button class="work-cta" id="workCta" type="button">Open case study <span aria-hidden="true">&#8599;</span></button>
+        </div>
+        <div class="work-visual" id="workVisual" aria-hidden="true"></div>
+        <div class="work-progress" id="workProgress" aria-label="Project progress"></div>
+      </div>
     </div>
     <div class="proj-list">
 
@@ -787,9 +823,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div class="project-card-body">
         <div class="project-card-top">
           <div class="proj-n">001</div>
-          <div class="proj-year">2025–2026</div>
+          <div class="proj-year">2025&ndash;2026</div>
         </div>
-        <div class="proj-title">MotorPlatform — Photo Capture Flow</div>
+        <div class="proj-title">MotorPlatform &mdash; Photo Capture Flow</div>
         <div class="proj-desc">Guided mobile vehicle photo capture for B2B automotive SaaS. Designing for speed, compliance, and consistent coverage at scale.</div>
         <div class="proj-tags">
           <span class="ptag">B2B SaaS</span>
@@ -797,7 +833,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <span class="ptag">Workflow Design</span>
           <span class="ptag">Automotive</span>
         </div>
-        <div class="proj-arr">↗</div>
+        <div class="proj-arr" aria-hidden="true">&#8599;</div>
       </div>
     </article>
 
@@ -810,14 +846,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="proj-n">002</div>
           <div class="proj-year">2024</div>
         </div>
-        <div class="proj-title">DigiGuard — Digital Security Product</div>
+        <div class="proj-title">DigiGuard &mdash; Digital Security Product</div>
         <div class="proj-desc">Brand-led UI design for a trustworthy, clear, and modern digital security product experience.</div>
         <div class="proj-tags">
           <span class="ptag">Brand Design</span>
           <span class="ptag">UI Design</span>
           <span class="ptag">Landing Page</span>
         </div>
-        <div class="proj-arr">↗</div>
+        <div class="proj-arr" aria-hidden="true">&#8599;</div>
       </div>
     </article>
 
@@ -830,14 +866,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="proj-n">003</div>
           <div class="proj-year">2024</div>
         </div>
-        <div class="proj-title">EDI — Inclusive Access and Representation</div>
+        <div class="proj-title">EDI &mdash; Inclusive Access and Representation</div>
         <div class="proj-desc">A research-led inclusive design project exploring access barriers, clarity, accessibility, and respectful digital interactions.</div>
         <div class="proj-tags">
           <span class="ptag">Inclusive Design</span>
           <span class="ptag">UX Research</span>
           <span class="ptag">Accessibility</span>
         </div>
-        <div class="proj-arr">↗</div>
+        <div class="proj-arr" aria-hidden="true">&#8599;</div>
       </div>
     </article>
 
@@ -850,14 +886,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="proj-n">004</div>
           <div class="proj-year">2024</div>
         </div>
-        <div class="proj-title">ReSoil — Daily Sustainability Habit</div>
+        <div class="proj-title">ReSoil &mdash; Daily Sustainability Habit</div>
         <div class="proj-desc">A 24-hour designathon product concept turning kitchen waste reuse into a simple, visible, and rewarding daily habit.</div>
         <div class="proj-tags">
           <span class="ptag">Sustainability</span>
           <span class="ptag">Product Design</span>
           <span class="ptag">Behaviour Change</span>
         </div>
-        <div class="proj-arr">↗</div>
+        <div class="proj-arr" aria-hidden="true">&#8599;</div>
       </div>
     </article>
 
@@ -865,23 +901,112 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
     </div>
   </section>
+
+  <section id="beyond" class="home-panel beyond-panel">
+    <div class="beyond-inner">
+      <div class="beyond-top">
+        <div class="beyond-intro">
+          <div class="panel-kicker">A LITTLE MORE ABOUT ME</div>
+          <h2 class="panel-title">Beyond Design</h2>
+          <p>When I&rsquo;m not designing, you&rsquo;ll probably find me exploring 3D, playing music, capturing little moments, or finding my way down a snowy mountain.</p>
+        </div>
+
+        <article class="beyond-block photography-block">
+          <div class="beyond-collage photography-collage">
+            <div class="image-slot photo-main" data-image-slot="photography-main">
+              <img src="suki_portfolio_assets/beyond-photography-main.png" alt="Swan and duck swimming through sparkling water">
+            </div>
+            <div class="image-slot photo-secondary photo-border" data-image-slot="photography-secondary">
+              <img src="suki_portfolio_assets/beyond-photography-secondary.png" alt="Portrait holding a small yellow flower under a blue sky">
+            </div>
+            <div class="image-slot photo-tertiary photo-border" data-image-slot="photography-tertiary">
+              <img src="suki_portfolio_assets/beyond-photography-tertiary.png" alt="Portrait in front of a textured wall">
+            </div>
+          </div>
+          <div class="beyond-caption">
+            <span>01 &mdash; Through My Lens</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="beyond-middle">
+        <article class="beyond-block modelling-block">
+          <div class="beyond-collage modelling-collage">
+            <div class="image-slot model-main" data-image-slot="3d-main">
+              <img src="suki_portfolio_assets/beyond-3d-main.png" alt="Soft 3D kitchen scene with a red panda character">
+            </div>
+            <div class="image-slot model-secondary-one photo-border" data-image-slot="3d-secondary-1">
+              <img src="suki_portfolio_assets/beyond-3d-secondary-1.png" alt="Blender scene with a small orange car model">
+            </div>
+            <div class="image-slot model-secondary-two photo-border" data-image-slot="3d-secondary-2">
+              <img src="suki_portfolio_assets/beyond-3d-secondary-2.png" alt="Blender render and viewport of a stylised machine model">
+            </div>
+          </div>
+          <div class="beyond-caption">
+            <span>02 &mdash; Making Things in 3D</span>
+            <p>3D Modelling &amp; Creative Experiments</p>
+          </div>
+        </article>
+
+        <article class="beyond-block music-block">
+          <div class="beyond-collage music-collage">
+            <div class="image-slot music-violin photo-border" data-image-slot="violin">
+              <img src="suki_portfolio_assets/beyond-music-violin-landscape.png" alt="Violin practice scene">
+            </div>
+            <div class="image-slot music-guitar photo-border" data-image-slot="guitar">
+              <video src="suki_portfolio_assets/beyond-music-guitar.mp4" controls preload="metadata" playsinline aria-label="Guitar video with playback and volume controls"></video>
+            </div>
+          </div>
+          <div class="beyond-caption">
+            <span>03 &mdash; Finding My Rhythm</span>
+            <p>Violin &amp; Guitar</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="beyond-moments">
+        <div class="moments-copy">
+          <h3>Little things, big joy.</h3>
+          <p>Snowboarding &amp; Life with My Cat</p>
+        </div>
+        <div class="moments-collage">
+          <div class="image-slot moment-snow photo-border" data-image-slot="snowboarding">
+            <video src="suki_portfolio_assets/beyond-snowboarding-dji.mov" controls muted preload="metadata" playsinline aria-label="Snowboarding video with playback controls"></video>
+          </div>
+          <div class="image-slot moment-cat photo-border" data-image-slot="cat">
+            <img src="suki_portfolio_assets/beyond-cat-portrait.png" alt="Cat resting indoors">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="home-contact" class="home-panel home-contact-panel">
+    <div class="panel-kicker">Contact</div>
+    <h2 class="panel-title">Let&rsquo;s shape a product experience with clarity and character.</h2>
+    <div class="home-contact-links">
+      <a href="mailto:liushuqi12@gmail.com">Email <span aria-hidden="true">&#8599;</span></a>
+      <a href="https://www.linkedin.com/in/shuqi-l-216a8a260/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
+      <a href="suki_portfolio_assets/suki-resume-2026.pdf" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">&#8599;</span></a>
+    </div>
+  </section>
 </div>
 
 <section id="project-detail">
-  <button class="back-btn" onclick="showMain('projects')">← BACK TO WORK</button>
+  <button class="back-btn" onclick="showMain('projects')">&larr; BACK TO WORK</button>
   <div class="detail-hero">
     <div class="brand-lockup">
       <img src="suki_portfolio_assets/motorplatform-logo.png" alt="MotorPlatform logo">
     </div>
     <div class="detail-tag">Hero / Project Intro</div>
-    <h1 class="detail-title">MotorPlatform — Product & UX Design for Automotive Operations</h1>
+    <h1 class="detail-title">MotorPlatform &mdash; Product &amp; UX Design for Automotive Operations</h1>
     <p class="detail-subtitle">Designing clearer, more reliable workflows for vehicle inspection, test drive setup, document review, and dealership operations in a B2B automotive SaaS platform.</p>
     <div class="case-tags">
       <span class="case-tag">B2B SaaS</span>
       <span class="case-tag">Product Design</span>
       <span class="case-tag">UX Design</span>
       <span class="case-tag">Workflow Optimisation</span>
-      <span class="case-tag">Mobile & Desktop</span>
+      <span class="case-tag">Mobile &amp; Desktop</span>
       <span class="case-tag">Automotive Operations</span>
     </div>
   </div>
@@ -889,7 +1014,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <div class="meta-item"><div class="meta-label">COMPANY</div><div class="meta-val">MotorPlatform</div></div>
     <div class="meta-item"><div class="meta-label">ROLE</div><div class="meta-val">Product / UX Designer</div></div>
     <div class="meta-item"><div class="meta-label">PLATFORM</div><div class="meta-val">Web app, mobile web/app</div></div>
-    <div class="meta-item"><div class="meta-label">TIMELINE</div><div class="meta-val">2025–2026</div></div>
+    <div class="meta-item"><div class="meta-label">TIMELINE</div><div class="meta-val">2025&ndash;2026</div></div>
     <div class="meta-item"><div class="meta-label">TEAM</div><div class="meta-val">Product, Engineering, QA, Operations</div></div>
     <div class="meta-item"><div class="meta-label">STATUS</div><div class="meta-val">Real product work, anonymised for portfolio</div></div>
   </div>
@@ -913,11 +1038,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </ul>
     <div class="diagram-row" aria-label="Product ecosystem diagram">
       <div class="diagram-node">Dealership user</div>
-      <div class="diagram-arrow">→</div>
+      <div class="diagram-arrow" aria-hidden="true">&rarr;</div>
       <div class="diagram-node">Vehicle data collection</div>
-      <div class="diagram-arrow">→</div>
+      <div class="diagram-arrow" aria-hidden="true">&rarr;</div>
       <div class="diagram-node">MotorPlatform review</div>
-      <div class="diagram-arrow">→</div>
+      <div class="diagram-arrow" aria-hidden="true">&rarr;</div>
       <div class="diagram-node">Operations decision / valuation / next action</div>
     </div>
     <img class="detail-image motorplatform-context-image" src="suki_portfolio_assets/motorplatform-context-overview.png" alt="MotorPlatform product context workflow overview visual">
@@ -951,7 +1076,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <figure class="phone-shot">
         <img src="suki_portfolio_assets/photo-flow-screen-2.png" alt="Photo Flow mobile screen 2">
         <div class="screen-overlay">
-          <div class="screen-overlay-title">Screen 01 — Entry Point</div>
+          <div class="screen-overlay-title">Screen 01 &mdash; Entry Point</div>
           <p>Users enter Photo Flow from the vehicle record and choose how to add media: take photo, start video, select from gallery, or upload a file.</p>
         </div>
         <figcaption class="phone-shot-label">SCREEN 01</figcaption>
@@ -959,7 +1084,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <figure class="phone-shot">
         <img src="suki_portfolio_assets/photo-flow-screen-1.png" alt="Photo Flow mobile screen 1">
         <div class="screen-overlay">
-          <div class="screen-overlay-title">Screen 02 — Guided Capture</div>
+          <div class="screen-overlay-title">Screen 02 &mdash; Guided Capture</div>
           <p>The camera screen uses visual guidance and photo type labels to help users capture the expected vehicle angle.</p>
         </div>
         <figcaption class="phone-shot-label">SCREEN 02</figcaption>
@@ -967,7 +1092,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <figure class="phone-shot">
         <img src="suki_portfolio_assets/photo-flow-screen-3.png" alt="Photo Flow mobile screen 3">
         <div class="screen-overlay">
-          <div class="screen-overlay-title">Screen 03 — Media Review</div>
+          <div class="screen-overlay-title">Screen 03 &mdash; Media Review</div>
           <p>Users can review the captured vehicle photo set before final submission.</p>
         </div>
         <figcaption class="phone-shot-label">SCREEN 03</figcaption>
@@ -975,9 +1100,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </div>
     <div class="screen-flow" aria-label="Photo Flow screen journey">
       <div class="diagram-node">Entry Point</div>
-      <div class="diagram-arrow">→</div>
+      <div class="diagram-arrow" aria-hidden="true">&rarr;</div>
       <div class="diagram-node">Guided Capture</div>
-      <div class="diagram-arrow">→</div>
+      <div class="diagram-arrow" aria-hidden="true">&rarr;</div>
       <div class="diagram-node">Media Review</div>
     </div>
     <p>The flow starts from the vehicle record, guides users through camera-based capture, and allows them to review the completed media set before submission.</p>
@@ -994,7 +1119,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="problem-step-copy">Dealership users need to complete capture quickly while moving through operational tasks.</div>
         </div>
       </div>
-      <div class="problem-arrow">→</div>
+      <div class="problem-arrow" aria-hidden="true">&rarr;</div>
       <div class="problem-step">
         <img class="problem-illustration" src="suki_portfolio_assets/problem-step-4.png" alt="Illustration of wrong or poor quality photos">
         <div>
@@ -1002,7 +1127,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="problem-step-copy">They may capture the wrong type, miss required shots, or submit poor-quality images.</div>
         </div>
       </div>
-      <div class="problem-arrow">→</div>
+      <div class="problem-arrow" aria-hidden="true">&rarr;</div>
       <div class="problem-step">
         <img class="problem-illustration" src="suki_portfolio_assets/problem-step-3.png" alt="Illustration of operations follow-up">
         <div>
@@ -1010,7 +1135,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="problem-step-copy">Operations teams need to ask for corrections, clarification, or additional media.</div>
         </div>
       </div>
-      <div class="problem-arrow">→</div>
+      <div class="problem-arrow" aria-hidden="true">&rarr;</div>
       <div class="problem-step">
         <img class="problem-illustration" src="suki_portfolio_assets/problem-step-2.png" alt="Illustration of higher rework and cost">
         <div>
@@ -1029,7 +1154,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   </div>
 
   <div class="detail-section">
-    <h2>Goals & Success Metrics</h2>
+    <h2>Goals &amp; Success Metrics</h2>
     <div class="goals-layout">
       <div class="goals-copy">
         <h3>Design Goals</h3>
@@ -1064,15 +1189,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <p>I structured the experience around a simple capture loop: guide, capture, auto-save, progress, and review. This allowed users to move quickly while still ensuring required photo coverage.</p>
     <div class="flowchart" aria-label="Photo Flow user journey diagram">
       <div class="flow-terminal">START</div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-node"><div class="flow-num">01</div><div class="flow-title">Start from Photo Checklist</div></div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-node"><div class="flow-num">02</div><div class="flow-title">Open Guided Camera</div></div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-node"><div class="flow-num">03</div><div class="flow-title">Capture Required Photo</div></div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-node flow-system"><div class="flow-num">04</div><div class="flow-title">System Checks Photo Quality</div></div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-decision">
         <div class="flow-decision-inner"><div class="flow-num">05</div><div class="flow-title">Is photo quality ok?</div></div>
       </div>
@@ -1083,21 +1208,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="flow-branch-card warning"><div class="flow-branch-title">Keep and continue</div></div>
         </div>
       </div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-node"><div class="flow-num">06</div><div class="flow-title">Repeat Until Photo Set Complete</div></div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-node flow-review"><div class="flow-num">07</div><div class="flow-title">Review All Photos</div></div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-decision">
         <div class="flow-decision-inner"><div class="flow-num">08</div><div class="flow-title">Are the photos all good?</div></div>
       </div>
       <div class="flow-branch-two">
-        <div class="flow-branch-card"><div class="flow-branch-title">All photos good</div><div class="flow-branch-copy">Save & Submit</div></div>
+        <div class="flow-branch-card"><div class="flow-branch-title">All photos good</div><div class="flow-branch-copy">Save &amp; Submit</div></div>
         <div class="flow-branch-card warning"><div class="flow-branch-title">Issue found</div><div class="flow-branch-copy">Retake specific one</div><div class="flow-return-link">Return to step 08: Are the photos all good?</div></div>
       </div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-node flow-final"><div class="flow-num">09</div><div class="flow-title">Internal Quality Review</div></div>
-      <div class="flow-arrow-down">↓</div>
+      <div class="flow-arrow-down" aria-hidden="true">&darr;</div>
       <div class="flow-terminal">END</div>
     </div>
     <p>The flow was designed as a fast capture loop, with auto-save and progress visibility reducing friction while still supporting required photo coverage.</p>
@@ -1126,7 +1251,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <li>AI photo type validation</li>
           <li>AI quality checks</li>
           <li>Scoring system</li>
-          <li>Compliance photos: plate & VIN</li>
+          <li>Compliance photos: plate &amp; VIN</li>
           <li>Retake/delete behaviour refinement</li>
           <li>Non-blocking real-time feedback</li>
         </ul>
@@ -1137,7 +1262,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   <div class="detail-section decision-section">
     <h2>Key Design Decisions</h2>
 
-    <h3>Design Decision 1 — Visual Camera Guidance</h3>
+    <h3>Design Decision 1 &mdash; Visual Camera Guidance</h3>
     <div class="annotated-block interactive-annotated-block">
       <div>
         <div class="phone-frame interactive-phone">
@@ -1159,7 +1284,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </div>
     <p>The camera screen uses visual overlays and short labels to reduce reliance on long written instructions. Users can understand what photo is expected at the moment of capture.</p>
 
-    <h3>Design Decision 2 — After Capture / Auto Advance State</h3>
+    <h3>Design Decision 2 &mdash; After Capture / Auto Advance State</h3>
     <div class="annotated-block interactive-annotated-block">
       <div>
         <div class="phone-frame interactive-phone">
@@ -1177,7 +1302,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </div>
     <p>Auto-save and automatic progression reduce repeated actions and keep users moving through the required photo set.</p>
 
-    <h3>Design Decision 3 — Progress Visibility</h3>
+    <h3>Design Decision 3 &mdash; Progress Visibility</h3>
     <div class="annotated-block interactive-annotated-block">
       <div>
         <div class="phone-frame interactive-phone dd3-phone">
@@ -1197,7 +1322,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </div>
     <p>Progress visibility helps users understand how much of the required set is complete without leaving the camera experience.</p>
 
-    <h3>Design Decision 4 — Exit and Resume</h3>
+    <h3>Design Decision 4 &mdash; Exit and Resume</h3>
     <div class="annotated-block interactive-annotated-block">
       <div>
         <div class="phone-frame interactive-phone dd4-phone">
@@ -1217,7 +1342,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </div>
     <p>Since users may be interrupted during vehicle capture, the flow supports leaving and resuming later without losing captured photos.</p>
 
-    <h3>Design Decision 5 — Preview Before Final Submission</h3>
+    <h3>Design Decision 5 &mdash; Preview Before Final Submission</h3>
     <div class="annotated-block interactive-annotated-block">
       <div>
         <div class="phone-frame interactive-phone dd5-phone">
@@ -1245,7 +1370,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     </div>
     <p>The preview screen gives users a final checkpoint before submission, supporting fast capture first and focused review afterwards.</p>
 
-    <h3>Design Decision 6 — Non-blocking AI Feedback V2 <span class="frame-tag">WIREFRAME</span></h3>
+    <h3>Design Decision 6 &mdash; Non-blocking AI Feedback V2 <span class="frame-tag">WIREFRAME</span></h3>
     <div class="annotated-block interactive-annotated-block">
       <div>
         <div class="phone-frame interactive-phone dd6-phone">
@@ -1347,10 +1472,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 </section>
 
 <section id="digiguard-detail">
-  <button class="back-btn" onclick="showMain('projects')">← BACK TO WORK</button>
+  <button class="back-btn" onclick="showMain('projects')">&larr; BACK TO WORK</button>
   <div class="detail-hero">
     <div class="detail-tag">Hero / Project Intro</div>
-    <h1 class="detail-title">DigiGuard — Brand-led UI Design for a Digital Security Product</h1>
+    <h1 class="detail-title">DigiGuard &mdash; Brand-led UI Design for a Digital Security Product</h1>
     <p class="detail-subtitle">A brand and UI design project focused on creating a trustworthy, clear, and modern digital experience for a security-focused product.</p>
     <div class="case-tags">
       <span class="case-tag">Brand Design</span>
@@ -1363,7 +1488,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
   </div>
   <div class="detail-meta">
     <div class="meta-item"><div class="meta-label">COMPANY</div><div class="meta-val">Cultiv8 Group</div></div>
-    <div class="meta-item"><div class="meta-label">ROLE</div><div class="meta-val">Brand & UI Designer</div></div>
+    <div class="meta-item"><div class="meta-label">ROLE</div><div class="meta-val">Brand &amp; UI Designer</div></div>
     <div class="meta-item"><div class="meta-label">PLATFORM</div><div class="meta-val">Web / Digital Product</div></div>
     <div class="meta-item"><div class="meta-label">TIMELINE</div><div class="meta-val">03.2024 - 06.2024</div></div>
     <div class="meta-item"><div class="meta-label">TOOLS</div><div class="meta-val">Figma, Adobe Illustrator / Photoshop, Webflow</div></div>
@@ -1521,7 +1646,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
               <div class="language-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24"><path d="M12 3.2 5 5.9v5.2c0 4.7 2.8 8.3 7 9.9 4.2-1.6 7-5.2 7-9.9V5.9l-7-2.7Z"/><path d="M8.2 12.2 12 8.9l3.8 3.3"/><path d="M9.4 11.3v5.1h2.1v-2.7h1v2.7h2.1v-5.1"/></svg>
               </div>
-              <h4>Trust & Security</h4>
+              <h4>Trust &amp; Security</h4>
               <p>Confident, protective, always on.</p>
             </div>
             <div class="language-item">
@@ -1582,7 +1707,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
     </div>
 
-    <h3>04 — Build consistency through reusable UI patterns</h3>
+    <h3>04 &mdash; Build consistency through reusable UI patterns</h3>
     <p>I created reusable patterns for cards, navigation, status indicators, forms, and content sections to maintain consistency across the product and support future scalability.</p>
     <div class="placeholder-grid component-masonry">
       <div class="component-card">
@@ -1663,7 +1788,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
 
       <div class="final-panel">
-        <div class="final-panel-label">02 Dashboard & Monitoring</div>
+        <div class="final-panel-label">02 Dashboard &amp; Monitoring</div>
         <div class="final-section-grid">
           <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-03.png" alt="DigiGuard device detail UI screen"></div></div>
           <div class="final-phone"><div class="final-screen"><img class="final-phone-image" src="suki_portfolio_assets/digiguard-final-dashboard-new-02.png" alt="DigiGuard dashboard monitoring UI screen"></div></div>
@@ -1699,12 +1824,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="detail-section">
     <h2>Reflection</h2>
-    <p>This project reinforced that visual design is not just about aesthetics — it can directly shape how trustworthy and understandable a product feels. It also shifted my thinking from designing individual screens to building reusable patterns that create a more consistent and scalable product experience.</p>
+    <p>This project reinforced that visual design is not just about aesthetics &mdash; it can directly shape how trustworthy and understandable a product feels. It also shifted my thinking from designing individual screens to building reusable patterns that create a more consistent and scalable product experience.</p>
   </div>
 </section>
 
 <section id="edi-detail">
-  <button class="back-btn" onclick="showMain('projects')">← BACK TO WORK</button>
+  <button class="back-btn" onclick="showMain('projects')">&larr; BACK TO WORK</button>
   <aside class="case-nav" aria-label="EDI case study navigation">
     <div class="case-nav-label">CASE STUDY</div>
     <div class="case-nav-list"></div>
@@ -1712,7 +1837,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="detail-hero">
     <div class="detail-tag">Hero / Project Intro</div>
-    <h1 class="detail-title">EDI — A Research-led Inclusive Design Project</h1>
+    <h1 class="detail-title">EDI &mdash; A Research-led Inclusive Design Project</h1>
     <p class="detail-subtitle">An inclusive design project exploring how digital experiences can reduce access barriers and better support people with diverse needs, backgrounds, and abilities.</p>
     <div class="case-tags">
       <span class="case-tag">Inclusive Design</span>
@@ -1742,7 +1867,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <div class="principle-grid">
       <div class="principle-card center-card"><h4>Accessibility</h4><p>Support different ways of accessing and consuming information.</p></div>
       <div class="principle-card center-card"><h4>Clarity</h4><p>Make important content easier to understand and navigate.</p></div>
-      <div class="principle-card center-card"><h4>Representation</h4><p>Create an experience that feels inclusive rather than designed around a single “default” user.</p></div>
+      <div class="principle-card center-card"><h4>Representation</h4><p>Create an experience that feels inclusive rather than designed around a single &ldquo;default&rdquo; user.</p></div>
     </div>
   </div>
 
@@ -1825,7 +1950,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h2>Design Response</h2>
     <p>I translated the three design principles into practical interface responses across information structure, user guidance, and inclusive content.</p>
 
-    <h3>01 — Clear &amp; Accessible Information</h3>
+    <h3>01 &mdash; Clear &amp; Accessible Information</h3>
     <p>I simplified the information hierarchy and strengthened readability so users can identify what matters, understand relationships between content, and find the next action more easily.</p>
     <div class="response-layout image-narrow">
       <div class="response-images">
@@ -1839,7 +1964,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
     </div>
 
-    <h3>02 — Flexible &amp; Supportive Guidance</h3>
+    <h3>02 &mdash; Flexible &amp; Supportive Guidance</h3>
     <p>I introduced contextual guidance at moments of uncertainty, giving users clearer explanations, feedback, and next steps without forcing everyone through the same level of support.</p>
     <div class="annotated-block">
       <img class="detail-image" src="suki_portfolio_assets/edi-solution-3-supportive-guidance.png" alt="EDI supportive guidance design response">
@@ -1850,7 +1975,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
     </div>
 
-    <h3>03 — Respectful &amp; Inclusive Content</h3>
+    <h3>03 &mdash; Respectful &amp; Inclusive Content</h3>
     <p>I reviewed language, feedback, and representation to remove unnecessary assumptions and create a more respectful and inclusive experience.</p>
     <div class="inclusive-content-board" aria-label="Respectful and inclusive content before and after examples">
       <div class="inclusive-content-head" aria-hidden="true">
@@ -1873,7 +1998,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           </div>
           <p class="inclusive-caption before">Blunt and unhelpful</p>
         </div>
-        <div class="inclusive-arrow">→</div>
+        <div class="inclusive-arrow" aria-hidden="true">&rarr;</div>
         <div>
           <div class="inclusive-example">
             <div class="inclusive-example-label">Form error message</div>
@@ -1898,7 +2023,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           </div>
           <p class="inclusive-caption before">Assumes users know what this is</p>
         </div>
-        <div class="inclusive-arrow">→</div>
+        <div class="inclusive-arrow" aria-hidden="true">&rarr;</div>
         <div>
           <div class="inclusive-example">
             <div class="inclusive-example-label">Form label</div>
@@ -1924,7 +2049,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           </div>
           <p class="inclusive-caption before">Feels fixed and one-size-fits-all</p>
         </div>
-        <div class="inclusive-arrow">→</div>
+        <div class="inclusive-arrow" aria-hidden="true">&rarr;</div>
         <div>
           <div class="inclusive-example">
             <div class="inclusive-example-label">Section heading</div>
@@ -1943,7 +2068,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="detail-section decision-section">
     <h2>Key Design Decisions</h2>
-    <h3>01 — Make content easier to scan</h3>
+    <h3>01 &mdash; Make content easier to scan</h3>
     <div class="annotated-block">
       <img class="detail-image decision-image-40" src="suki_portfolio_assets/edi-decision-1-scan-information.png" alt="EDI design decision showing scannable key information">
       <div class="response-notes">
@@ -1951,7 +2076,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
     </div>
 
-    <h3>02 — Give users more control</h3>
+    <h3>02 &mdash; Give users more control</h3>
     <div class="annotated-block">
       <img class="detail-image decision-image-40" src="suki_portfolio_assets/edi-decision-2-confidence-levels.png" alt="EDI design decision showing support for different confidence levels">
       <div class="response-notes">
@@ -1959,7 +2084,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       </div>
     </div>
 
-    <h3>03 — Design inclusion into the core experience</h3>
+    <h3>03 &mdash; Design inclusion into the core experience</h3>
     <div class="annotated-block">
       <img class="detail-image decision-image-40" src="suki_portfolio_assets/edi-decision-3-accessibility-foundation.png" alt="EDI design decision showing accessibility as a design foundation">
       <div class="response-notes">
@@ -1989,12 +2114,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="detail-section">
     <h2>Reflection</h2>
-    <p>This project changed how I think about accessibility: rather than treating it as a final compliance check, I learned to use it as an input throughout the design process. Research also reinforced the importance of validating assumptions with users instead of designing around a single “default” experience.</p>
+    <p>This project changed how I think about accessibility: rather than treating it as a final compliance check, I learned to use it as an input throughout the design process. Research also reinforced the importance of validating assumptions with users instead of designing around a single &ldquo;default&rdquo; experience.</p>
   </div>
 </section>
 
 <section id="resoil-detail">
-  <button class="back-btn" onclick="showMain('projects')">← BACK TO WORK</button>
+  <button class="back-btn" onclick="showMain('projects')">&larr; BACK TO WORK</button>
   <aside class="case-nav" aria-label="ReSoil case study navigation">
     <div class="case-nav-label">CASE STUDY</div>
     <div class="case-nav-list"></div>
@@ -2002,7 +2127,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
   <div class="detail-hero">
     <div class="detail-tag">Hero / Project Intro</div>
-    <h1 class="detail-title">ReSoil — Turning Kitchen Waste into a Daily Sustainability Habit</h1>
+    <h1 class="detail-title">ReSoil &mdash; Turning Kitchen Waste into a Daily Sustainability Habit</h1>
     <p class="detail-subtitle">A sustainability product concept designed during a 24-hour designathon, encouraging users to reuse daily kitchen waste to cultivate organic soil through simple, rewarding habits.</p>
     <div class="case-tags">
       <span class="case-tag">Product Design</span>
@@ -2086,13 +2211,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
     <h3>Core Habit Loop</h3>
     <div class="habit-loop">
       <div class="habit-step"><div class="habit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 7h18s-3 0-3-7"/><path d="M10 19a2 2 0 0 0 4 0"/></svg></div><h4>TRIGGER</h4><p>Reminder</p></div>
-      <div class="habit-arrow">→</div>
+      <div class="habit-arrow" aria-hidden="true">&rarr;</div>
       <div class="habit-step"><div class="habit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18"/><path d="M5 10c4 0 7-3 7-7"/><path d="M19 10c-4 0-7-3-7-7"/><path d="M7 18h10"/></svg></div><h4>ACTION</h4><p>Add kitchen waste</p></div>
-      <div class="habit-arrow">→</div>
+      <div class="habit-arrow" aria-hidden="true">&rarr;</div>
       <div class="habit-step"><div class="habit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 16 3-4 3 2 4-7"/></svg></div><h4>FEEDBACK</h4><p>Soil progress update</p></div>
-      <div class="habit-arrow">→</div>
+      <div class="habit-arrow" aria-hidden="true">&rarr;</div>
       <div class="habit-step"><div class="habit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M5 6H3v2a4 4 0 0 0 4 4"/><path d="M19 6h2v2a4 4 0 0 1-4 4"/></svg></div><h4>REWARD</h4><p>Reward / milestone</p></div>
-      <div class="habit-arrow">→</div>
+      <div class="habit-arrow" aria-hidden="true">&rarr;</div>
       <div class="habit-step"><div class="habit-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2"/><path d="M3 12A9 9 0 0 1 18.5 5.8"/><path d="M3 18h5v-5"/><path d="M21 6h-5v5"/></svg></div><h4>REPEAT</h4><p>Continue the habit</p></div>
     </div>
   </div>
@@ -2127,7 +2252,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
       <div class="feature-card"><h4>Waste Guide</h4><p>Helps users understand what kitchen waste can be reused and how to process it.</p></div>
       <div class="feature-card"><h4>Daily Logging</h4><p>Allows users to record small daily actions and build a visible habit streak.</p></div>
       <div class="feature-card"><h4>Soil Progress Tracking</h4><p>Shows how waste is gradually transformed into usable organic soil.</p></div>
-      <div class="feature-card"><h4>Rewards & Milestones</h4><p>Encourages consistency through positive feedback and achievement moments.</p></div>
+      <div class="feature-card"><h4>Rewards &amp; Milestones</h4><p>Encourages consistency through positive feedback and achievement moments.</p></div>
       <div class="feature-card"><h4>Plant Growth / Community Sharing</h4><p>Connects soil creation to visible outcomes, such as growing plants or sharing progress with others.</p></div>
     </div>
   </div>
@@ -2188,77 +2313,77 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 </section>
 
 <section id="about">
-  <button class="back-btn" onclick="showMain('hero')">← BACK HOME</button>
-  <div class="sec-header">
-    <span class="sec-num">ABOUT</span>
-    <h2 class="sec-title">About</h2>
-  </div>
-  <div class="about-photo-placeholder" aria-label="Suki profile image with interactive reveal">
-    <img class="about-photo-real" src="suki_portfolio_assets/about-real-photo.png" alt="Suki portrait photo">
-    <img class="about-photo-watercolor" src="suki_portfolio_assets/about-watercolor.png" alt="Watercolor portrait of Suki">
-  </div>
-  <div class="about-grid">
-    <div class="about-left">
-      <p class="about-text">Hi, I'm Suki — a UI/UX designer and Master of Computer Science student at the University of Sydney. I design digital products that make complex workflows feel simple and reliable.</p>
-      <p class="about-text">My background spans B2B SaaS, mobile, and web — with a focus on operational and workflow-heavy products where clarity matters most. I care about bridging the gap between user needs and technical feasibility.</p>
-      <p class="about-text">Currently working part-time at MotorPlatform, designing mobile-first experiences for automotive dealership operations.</p>
-      <div class="skills-block">
-        <div class="skills-label">DESIGN METHODS</div>
-        <div class="skill-tags">
-          <span class="skill-tag">User Research</span>
-          <span class="skill-tag">User Interviews</span>
-          <span class="skill-tag">Usability Testing</span>
-          <span class="skill-tag">Competitor Analysis</span>
-          <span class="skill-tag">User Flows</span>
-          <span class="skill-tag">Wireframing</span>
-          <span class="skill-tag">Prototyping</span>
-          <span class="skill-tag">Responsive Design</span>
-        </div>
-      </div>
-      <div class="skills-block" style="margin-top:1.25rem">
-        <div class="skills-label">TOOLS</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Framer</span>
-          <span class="skill-tag">Adobe XD</span>
-          <span class="skill-tag">Photoshop</span>
-          <span class="skill-tag">Illustrator</span>
-          <span class="skill-tag">HTML / CSS / JS</span>
-        </div>
-      </div>
+  <button class="back-btn" onclick="showMain('hero')">&larr; BACK HOME</button>
+  <div class="about-inner">
+    <div class="sec-header">
+      <span class="sec-num">PROFILE</span>
+      <h2 class="sec-title">About</h2>
     </div>
-    <div class="about-right">
-      <div class="skills-label" style="margin-bottom:1.25rem">EXPERIENCE</div>
-      <div class="exp-item">
-        <div class="exp-company"><a href="https://www.linkedin.com/company/motorplatform-au/about/" target="_blank" rel="noopener noreferrer">MotorPlatform</a></div>
-        <div class="exp-role">UX Designer (Part-time)</div>
-        <div class="exp-period">July 2025 – Present</div>
-        <div class="exp-desc">Designing mobile-first flows for B2B automotive SaaS. Scalable UI patterns, competitor analysis, iterative collaboration with product and engineering.</div>
+    <div class="about-heading-divider" aria-hidden="true"></div>
+    <div class="about-grid">
+      <div class="about-left">
+        <div class="about-section-label">01 / INTRODUCTION</div>
+        <p class="about-text">Hi, I'm Suki &mdash; a UI/UX designer and Master of Computer Science student at the University of Sydney. I design digital products that make complex workflows feel simple and reliable.</p>
+        <p class="about-text">My background spans B2B SaaS, mobile, and web &mdash; with a focus on operational and workflow-heavy products where clarity matters most. I care about bridging the gap between user needs and technical feasibility.</p>
+        <p class="about-text">Currently working part-time at MotorPlatform, designing mobile-first experiences for automotive dealership operations.</p>
+        <div class="skills-block">
+          <div class="skills-label">DESIGN METHODS</div>
+          <div class="skill-tags">
+            <span class="skill-tag">User Research</span>
+            <span class="skill-tag">User Interviews</span>
+            <span class="skill-tag">Usability Testing</span>
+            <span class="skill-tag">Competitor Analysis</span>
+            <span class="skill-tag">User Flows</span>
+            <span class="skill-tag">Wireframing</span>
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
+        <div class="skills-block">
+          <div class="skills-label">TOOLS</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Framer</span>
+            <span class="skill-tag">Adobe XD</span>
+            <span class="skill-tag">Photoshop</span>
+            <span class="skill-tag">Illustrator</span>
+            <span class="skill-tag">HTML / CSS / JS</span>
+          </div>
+        </div>
       </div>
-      <div class="exp-item">
-        <div class="exp-company"><a href="https://www.linkedin.com/company/cultiv8-pty-ltd/" target="_blank" rel="noopener noreferrer">Cultiv8 Pty Ltd</a></div>
-        <div class="exp-role">Brand & UI/UX Designer (Contract)</div>
-        <div class="exp-period">Jan 2024 – Dec 2024</div>
-        <div class="exp-desc">End-to-end design for 4 products across smart home, AI education, AR training, and game asset management. 25% engagement uplift, 15% drop-off reduction.</div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-company"><a href="https://www.linkedin.com/company/paxform/" target="_blank" rel="noopener noreferrer">Paxform Pty Ltd</a></div>
-        <div class="exp-role">UI/UX Design Intern</div>
-        <div class="exp-period">Feb – Jun 2023</div>
-        <div class="exp-desc">0-to-1 digital check-in experience. Figma & Adobe XD dashboard design, usability testing with 10 participants, user flow improvements.</div>
-      </div>
-      <div style="margin-top:1.5rem">
-        <div class="skills-label" style="margin-bottom:1rem">EDUCATION</div>
-        <div class="exp-desc"><strong>Master of Computer Science</strong> — University of Sydney, 2025–2026</div>
-        <div class="exp-desc" style="margin-top:0.5rem"><strong>Bachelor of Design Computing</strong> — University of Sydney, 2022–2024</div>
-        <div class="exp-desc" style="margin-top:0.5rem;color:#8a8784">Both with Weighted Average Mark with Distinction</div>
+      <div class="about-right">
+        <div class="about-section-label">02 / EXPERIENCE</div>
+        <div class="exp-item">
+          <div class="exp-company"><a href="https://www.linkedin.com/company/motorplatform-au/about/" target="_blank" rel="noopener noreferrer">MotorPlatform</a></div>
+          <div class="exp-role">UX Designer (Part-time)</div>
+          <div class="exp-period">July 2025 &ndash; Present</div>
+          <div class="exp-desc">Designing mobile-first flows for B2B automotive SaaS. Scalable UI patterns, competitor analysis, iterative collaboration with product and engineering.</div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-company"><a href="https://www.linkedin.com/company/cultiv8-pty-ltd/" target="_blank" rel="noopener noreferrer">Cultiv8 Pty Ltd</a></div>
+          <div class="exp-role">Brand &amp; UI/UX Designer (Contract)</div>
+          <div class="exp-period">Jan 2024 &ndash; Dec 2024</div>
+          <div class="exp-desc">End-to-end design for 4 products across smart home, AI education, AR training, and game asset management. 25% engagement uplift, 15% drop-off reduction.</div>
+        </div>
+        <div class="exp-item exp-item-last">
+          <div class="exp-company"><a href="https://www.linkedin.com/company/paxform/" target="_blank" rel="noopener noreferrer">Paxform Pty Ltd</a></div>
+          <div class="exp-role">UI/UX Design Intern</div>
+          <div class="exp-period">Feb &ndash; Jun 2023</div>
+          <div class="exp-desc">0-to-1 digital check-in experience. Figma &amp; Adobe XD dashboard design, usability testing with 10 participants, user flow improvements.</div>
+        </div>
+        <div class="education-block">
+          <div class="about-section-label">03 / EDUCATION</div>
+          <div class="education-item"><strong>Master of Computer Science</strong> &mdash; University of Sydney, 2025&ndash;2026</div>
+          <div class="education-item"><strong>Bachelor of Design Computing</strong> &mdash; University of Sydney, 2022&ndash;2024</div>
+          <div class="education-note">Both with Weighted Average Mark with Distinction</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="contact">
-  <button class="back-btn" onclick="showMain('hero')">← BACK HOME</button>
+  <button class="back-btn" onclick="showMain('hero')">&larr; BACK HOME</button>
   <div class="contact-inner">
     <div class="contact-eyebrow">GET IN TOUCH</div>
     <h2 class="contact-title">Let's work<br>together</h2>
@@ -2269,14 +2394,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
           <div class="contact-link-label">EMAIL</div>
           <div class="contact-link-val">liushuqi12@gmail.com</div>
         </div>
-        <div class="contact-arr">↗</div>
+        <div class="contact-arr" aria-hidden="true">&#8599;</div>
       </a>
       <a class="contact-link" href="https://www.linkedin.com/in/shuqi-l-216a8a260/" target="_blank">
         <div>
           <div class="contact-link-label">LINKEDIN</div>
           <div class="contact-link-val">Open my LinkedIn profile</div>
         </div>
-        <div class="contact-arr">↗</div>
+        <div class="contact-arr" aria-hidden="true">&#8599;</div>
       </a>
     </div>
   </div>
@@ -2287,18 +2412,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 const cur = document.getElementById('cur');
 let cx=window.innerWidth/2, cy=window.innerHeight/2;
 const homeStory = document.querySelector('.home-story');
-const mainSections = ['hero','about','projects'];
+const mainSections = ['hero','projects','about','beyond','home-contact'];
 const detailSections = ['project-detail','digiguard-detail','edi-detail','resoil-detail','contact'];
-document.getElementById('hero').after(document.getElementById('about'));
-
-const aboutPortrait = document.querySelector('.about-photo-placeholder');
-if(aboutPortrait){
-  aboutPortrait.addEventListener('mousemove', e=>{
-    const rect = aboutPortrait.getBoundingClientRect();
-    aboutPortrait.style.setProperty('--mx', `${e.clientX - rect.left}px`);
-    aboutPortrait.style.setProperty('--my', `${e.clientY - rect.top}px`);
-  });
-}
+const homeAbout=document.getElementById('about');
+const projectsSection=document.getElementById('projects');
+if(homeAbout&&projectsSection)projectsSection.after(homeAbout);
 
 function showMain(target){
   if(homeStory)homeStory.style.display='';
@@ -2412,7 +2530,7 @@ document.querySelectorAll('.hero-title,.detail-list li,.phone-shot,.problem-step
 });
 
 const orbCanvas=document.getElementById('heroOrb');
-const orbCtx=orbCanvas.getContext('2d');
+const orbCtx=orbCanvas?orbCanvas.getContext('2d'):null;
 let orbMx=0, orbMy=0, orbTx=0, orbTy=0, orbT=0;
 let orbMouseTx=0, orbMouseTy=0;
 const reducedMotionQuery=window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -2532,6 +2650,7 @@ function updateScrollProgress(){
 }
 
 function resizeOrb(){
+  if(!orbCanvas||!orbCtx)return;
   const rect=orbCanvas.getBoundingClientRect();
   const dpr=Math.min(window.devicePixelRatio||1,2);
   orbCanvas.width=Math.max(1,Math.floor(rect.width*dpr));
@@ -2659,6 +2778,7 @@ function getAboutOrbOffset(w,h,r){
 }
 
 function drawOrb(){
+  if(!orbCanvas||!orbCtx)return;
   smoothedScrollProgress+=(scrollProgress-smoothedScrollProgress)*0.075;
   updateOrbTimeline();
   orbTx=orbMouseTx;
@@ -2728,12 +2848,18 @@ function drawOrb(){
   requestAnimationFrame(drawOrb);
 }
 
-resizeOrb();
-updateScrollProgress();
-window.addEventListener('scroll',updateScrollProgress,{passive:true});
-window.addEventListener('resize',()=>{
+if(orbCanvas&&orbCtx){
   resizeOrb();
   updateScrollProgress();
-});
-drawOrb();
+  window.addEventListener('scroll',updateScrollProgress,{passive:true});
+  window.addEventListener('resize',()=>{
+    resizeOrb();
+    updateScrollProgress();
+  });
+  drawOrb();
+}
 </script>
+<script src="home-hero.js"></script>
+<script src="home-experience.js"></script>
+</body>
+</html>
